@@ -1,0 +1,33 @@
+.header {
+    
+}
+.headerGrid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    width: 72px;
+}
+.logo img {
+    width: 100%;
+}
+.link {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    transition: color 350ms;
+}
+.link:hover {
+    color: #fc8b06;
+}
+.link.active {
+    color: #fc8b06;
+    text-decoration: underline;
+}
+.nav-menu {
+    display: flex;
+    column-gap: 10px;
+}
