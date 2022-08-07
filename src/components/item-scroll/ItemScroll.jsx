@@ -11,9 +11,9 @@ const ItemScroll = ({ text, img, index, componentRef }) => {
             inline: "center",
         });
     };
-    // console.log(componentRef);
+    
     return (
-        <div onClick={buttonHandler(componentRef)} className="item-scroll" style={{ top: (index * 60) + 50 }}>
+        <div onClick={buttonHandler(componentRef)} className="item-scroll" style={{ top: (index * 60) + 165 }}>
             <div className="item-scroll-text">
                 {text}
             </div>

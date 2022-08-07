@@ -4,13 +4,24 @@ const Tires = () => {
     return (
         <div className="tires section-item">
             <div className="section-item-left">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1439.159921554601!2d30.29479804378238!3d59.81425668597728!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469624ce1013f7c9%3A0xab9de8f651ab88cf!2sAquaJet%2C!5e0!3m2!1sru!2sru!4v1656689000366!5m2!1sru!2sru" style={{width:"100%", height:"400px", border:"0"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            <iframe className="map-tire" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aac581e65f55c274839924973e27ea358385063e00cfab274ff63b9248c78e7ba&amp;source=constructor" width="100%" height="100% " frameborder="0"></iframe>            </div>
             <div className="section-item-right">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit a accusamus earum quia nam ducimus temporibus
-                mollitia nisi, illum laborum nobis nemo totam, doloribus, vero voluptates impedit? Ipsum officiis inventore eos
-                voluptates temporibus repellat quos unde quaerat? Possimus corporis incidunt veniam nisi, sequi quia temporibus blanditiis minima?
-                Dolorum rerum consequuntur vel cum reprehenderit magni sunt, natus officia, repellendus, consequatur magnam!
+                <div className="section-item-left-header">
+                    <p className='item-right-h'>Уважаемые клиенты!<br /> <span className='span-item-right'>Наши партнёры</span>, комплекс "Aqua Jet", предлагают весь спектр услуг по шиномонтажу и ремонту колёсных дисков:</p>
+                    <ul className='item-right-list'>
+                        <li> Сезонная смена колёс</li>
+                        <li> Хранение колёс</li>
+                        <li> Продажа шин</li>
+                        <li> Снятие секреток</li>
+                        <li> Ремонт покрышек</li>
+                        <li> Ремонт дисков</li>
+                        <li> Восстановление геометрии диска</li>
+                        <li> Порошковая и акриловая покраска дисков</li>
+                    </ul>
+                </div>
+                <p className='item-right-h'>
+                    Цены на сезонную смену резины <span className='span-item-right'>от 1400 рублей</span> <br />
+                    Все работы выполняются с использованием современного оборудования.</p>
             </div>
         </div>
     );

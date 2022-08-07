@@ -1,18 +1,31 @@
 .section-title {
-    font-size: 30px;
+    font-size: 60px;
     text-align: center;
     margin-bottom: 30px;
 }
 
 .section {
+    z-index: 2;
+    position: relative;
     display: flex;
     flex-direction: column;
     grid-row-gap: 30px;
     padding: 30px 0;
+    line-height: 26px;
+    height: 100vh;
+    justify-content: center;
+
 }
 
+.section-grid {
+    margin-top: 50px;
+}
+
+.section-rellax {
+    color: #fff;
+}
 .section:nth-child(odd) {
-    background-color: #EDF4FB;  
+    /* background-color: #d1d1d1; */
 }
 
 .section-item {
@@ -27,7 +40,92 @@
     row-gap: 10px;
     margin-top: 20px;
 }
+
 .section-item-image {
     width: 100%;
     border-radius: 15px;
+}
+
+.mobile .section-item {
+    grid-template-columns: 1fr;
+}
+
+.item-right-h {
+    font-weight: bold;
+    text-align: center;
+}
+
+.item-right-list {
+    list-style: square;
+    font-size: 17px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.mobile .section-item-image {
+    display: none;
+}
+
+.section-rellax .section-item-right {
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 4px rgb(255 255 255 / 60%);
+    padding: 30px;
+}
+
+.section-rellax .section-item-left {
+    display: flex;
+    justify-content: center;
+    line-height: 80px;
+}
+
+.section-rellax .section-title {
+    font-size: 60px;
+    text-shadow: 4px 4px 2px rgb(150 150 150);
+}
+
+.span-item-right {
+    color: #fc8b06;
+}
+
+.section-item-left,
+.section-item-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section-item-left h2 {
+    font-size: 60px;
+    text-align: center;
+    text-shadow: 4px 4px 2px rgb(150 150 150);
+    text-transform: uppercase;
+}
+
+.mobile .section-item-left h2 {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 40px;
+}
+
+.mobile .map-tire {
+    margin-bottom: 30px;
+}
+
+.mobile .map-wash {
+    margin-top: 30px;
+}
+
+.section.mobile {
+    height: auto;
+}
+
+.mobile .section-title {
+    line-height: 36px;
+    margin-bottom: 0;
+    font-size: 30px;
+}
+
+.mobile .section-grid {
+    margin-top: 20px;
 }

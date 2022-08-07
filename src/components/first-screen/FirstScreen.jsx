@@ -1,9 +1,10 @@
 import React from "react";
 import { Parallax } from "react-parallax";
-import firstScreen from "../../assets/images/first-screen.jpg";
 import ItemScroll from "../item-scroll/ItemScroll";
 import "./FirstScreen.css";
 import { itemScrollData } from "../../data/item-scroll.data";
+import WorkingTime from "../working-time/WorkingTime";
+import { BrowserView } from 'react-device-detect';
 
 const insideStyles = {
     padding: 20,
@@ -13,24 +14,26 @@ const insideStyles = {
     transform: "translate(-50%,-50%)",
     zIndex: 2,
 };
-const FirstScreen = ({componentsRef}) => {
-    // console.log(componentsRef);
+const FirstScreen = ({ componentsRef, itemScrollToggle, image, title }) => {
     return (
-        <Parallax bgClassName="first-screen-image" bgImage={firstScreen} strength={500}>
-            <div style={{ height: "90vh" }}>
-                <div style={insideStyles}>
-                    {itemScrollData.map((el, index) => {
-                        return (
-                            <ItemScroll
-                                componentRef={componentsRef[el.ref]}
-                                text={el.name}
-                                img={el.icon}
-                                key={el.id}
-                                index={index}
-                            />
-                        )
-                    })}
-                </div>
+        <Parallax bgClassName="first-screen-image" bgImage={image} strength={500}>
+            <div style={{ height: "100vh" }}>
+                <WorkingTime title={title} />
+                <BrowserView>
+                    <div style={insideStyles}>
+                        {itemScrollToggle && itemScrollData.map((el, index) => {
+                            return (
+                                <ItemScroll
+                                    componentRef={componentsRef && componentsRef[el.ref]}
+                                    text={el.name}
+                                    img={el.icon}
+                                    key={el.id}
+                                    index={index}
+                                />
+                            )
+                        })}
+                    </div>
+                </BrowserView>
             </div>
         </Parallax>
     )

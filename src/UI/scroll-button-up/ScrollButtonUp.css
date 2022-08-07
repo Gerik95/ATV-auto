@@ -1,0 +1,27 @@
+.button_top {
+    position: fixed;
+    bottom: 50px;
+    cursor: pointer;
+    transition: all .35s ease;
+    z-index: 9999;
+}
+
+.button_top.hide {
+    right: -50px;
+}
+
+.button_top.show {
+    right: 50px;
+}
+
+.button_top:hover {
+    opacity: .6;
+}
+
+.button_top img {
+    width: 50px;
+}
+
+.mobile.button_top.show {
+    right: 20px;
+}

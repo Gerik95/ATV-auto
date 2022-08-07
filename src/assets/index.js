@@ -9,7 +9,12 @@ import engineRepair from "./images/engine-repair.jpg";
 import suspentionCorner from "./images/suspention-corner.jpg";
 import electricCar from "./images/electric-car.jpg";
 import suspentionRepair from "./images/suspention-repair.jpg";
-import tuning from "./images/tuning.jpg";
+import tuning from "./images/tuning1.jpg";
+import telegram from "./images/conctact-logo/telegram.png";
+import instagram from "./images/conctact-logo/instagram.png";
+import vk from "./images/conctact-logo/vk.png";
+import whatsapp from "./images/conctact-logo/whatsapp.png";
+import call from "./images/conctact-logo/call.png";
 
 export {
     engineIcon,
@@ -24,4 +29,9 @@ export {
     electricCar,
     suspentionRepair,
     tuning,
+    telegram,
+    instagram,
+    vk,
+    whatsapp,
+    call
 }

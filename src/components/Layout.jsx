@@ -1,15 +1,20 @@
 import React from "react";
-import {Outlet}from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import NavMenu from "./nav/Nav";
+import ScrollButtonUp from "../UI/scroll-button-up/ScrollButtonUp";
+import Footer from "./footer/Footer";
+
+
 const Layout = () => {
     return (
-        <>
-            <NavMenu/>
+        <div className="layout">
+            <NavMenu />
             <div className="container">
-                <Outlet/>
+                <Outlet />
             </div>
-            <footer className="footer">Footer 2022 by DimaS</footer>
-        </>
+            <ScrollButtonUp />
+            <Footer />
+        </div>
     )
 }
 export default Layout;

@@ -1,5 +1,9 @@
 .header {
-    
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
 }
 .headerGrid {
     display: flex;
@@ -17,17 +21,72 @@
     padding: 5px 10px;
     font-size: 18px;
     font-weight: 500;
-    color: #000;
-    transition: color 350ms;
+    color: #fff;
+    transition: all 350ms;
 }
 .link:hover {
     color: #fc8b06;
+    
 }
 .link.active {
     color: #fc8b06;
-    text-decoration: underline;
 }
 .nav-menu {
     display: flex;
     column-gap: 10px;
+}
+.prolamp {
+    background-color: #b61a18;
+    color: #fff;
+    border-radius: 6px;
+}
+.prolamp:hover {
+    background-color: rgb(117, 2, 2);
+    color: #fff;
+}
+
+.menu-button {
+    position: absolute;
+    right: 20px;
+    z-index: 1002;
+}
+
+.headerGrid.mobile {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    z-index: 1001;
+    flex-direction: column;
+    justify-content: center;
+    left: -100%;
+    transition: left .5s;
+}
+
+.headerGrid.mobile.active {
+    left: 0;
+}
+
+.menu-button .dehaze-icon {
+    font-size: 30px;
+    fill: #fff;
+}
+
+.menu-button {
+    top: 15px;
+}
+
+.menu-button .cancel-icon {
+    font-size: 30px;
+    fill: #fc8b06;
+}
+
+.nav-menu.mobile {
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+    
 }

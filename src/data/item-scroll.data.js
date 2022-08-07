@@ -2,7 +2,7 @@ import { engineIcon, suspensionIcon, suspensionCornerIcon, electricCarIcon, tuni
 export const itemScrollData = [
     {
         id: 1,
-        name: "Ремонт двигателя",
+        name: "Ремонт двигателя и КПП",
         icon: engineIcon,
         ref: "ref1",
     },

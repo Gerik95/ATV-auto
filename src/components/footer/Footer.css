@@ -1,0 +1,107 @@
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer_grid {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    align-items: center;
+    grid-column-gap: 50px;
+}
+
+.payment {
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+}
+
+.payment_images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.payment_image {
+    width: 100%;
+}
+
+.contacts_item {
+    margin-bottom: 10px;
+
+}
+
+.contacts_item_text {
+    margin-top: 5px;
+    line-height: 22px;
+}
+
+.prices {
+    padding-right: 20px;
+}
+
+.contacts_wrap {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "contacts tires carwash"
+        "prices prices prices";
+    grid-row-gap: 20px;
+}
+
+.contacts_item.contacts {
+    grid-area: contacts;
+}
+
+.contacts_item.tires {
+    grid-area: tires;
+}
+
+.contacts_item.carwash {
+    grid-area: carwash;
+}
+
+.prices {
+    grid-area: prices;
+    color: gray;
+}
+
+.contacts_item_text a {
+    color: #fff;
+    transition: color 350ms;
+}
+
+.contacts_item_text a:hover {
+    color: #fc8b06;
+}
+
+.mobile .footer_grid {
+    grid-template-columns: 1fr;
+
+}
+
+.mobile .contacts_wrap {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "contacts contacts contacts"
+        "tires tires tires"
+        "carwash carwash carwash"
+        "prices prices prices";
+}
+
+.mobile .contacts_item {
+    text-align: center;
+}
+
+.mobile .payment {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.mobile .prices {
+    text-align: center;
+}

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;800;900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;800;900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;800;900&family=Roboto:ital,wght@1,100;1,300;1,500;1,900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -22,14 +22,33 @@ ul {
     box-sizing: border-box;
     margin: 0 auto;
 }
+
 .App {
     display: grid;
     grid-template-rows: 70px 1fr 70px;
     min-height: 100vh;
-    height: 3000px;
 }
-.footer {
-    background-color: #000;
-    color: #fff;
+
+.layout {
+    position: relative;
+}
+
+.block_wrap {
+    border-radius: 20px;
+    padding: 40px;
+    background-color: #F2F6F7;
+}
+
+.mobile .block_wrap {
     padding: 10px;
+    grid-template-columns: 1fr;
 }
+
+.mobile .item-right-list {
+    padding-left: 20px;
+}
+
+.mobile .wrapper {
+    padding: 0 10px;
+}
+

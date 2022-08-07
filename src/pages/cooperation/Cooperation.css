@@ -1,0 +1,73 @@
+.requisites {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cooperation {
+    padding: 50px 0;
+}
+
+.cooperation_info_title {
+    font-size: 25px;
+    color: #172126;
+    text-align: center;
+}
+
+.cooperation_info_list {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #172126;
+    margin-top: 50px;
+}
+
+.cooperation_info_list h4 {
+    margin-bottom: 20px;
+}
+
+.cooperation_info_items {
+    line-height: 22px;
+    font-weight: 400;
+    color: #172126;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.cooperation_info_text {
+    line-height: 24px;
+    color: #172126;
+    margin-top: 16px;
+    font-weight: 500;
+}
+
+.cooperation_info_text p {
+    
+}
+
+.requisites_list {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #172126;
+}
+
+.requisites_items {
+    line-height: 22px;
+    font-weight: 400;
+    color: #172126;
+    font-size: 16px;
+    
+}
+
+.requisites img {
+    width: 250px;
+}
+
+.requisites_list h4 {
+    margin-bottom: 10px;
+}
+
+.mobile .cooperation-image {
+    display: none;
+}

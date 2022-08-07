@@ -6,7 +6,7 @@ import About from './pages/about-page/About';
 import Contacts from './pages/contacts/Contacts';
 import Cooperation from './pages/cooperation/Cooperation';
 import Carwash from './pages/carwash-page/Carwash';
-import Service from './pages/service-page/Service';
+import ProLamp from './pages/service-page/ProLamp';
 import Tirefit from './pages/tirefit-page/Tirefit';
 
 
@@ -20,7 +20,7 @@ function App() {
           <Route path="contacts" element={<Contacts />} />
           <Route path="cooperation" element={<Cooperation />} />
           <Route path="carwash" element={<Carwash />} />
-          <Route path="service" element={<Service />} />
+          <Route path="pro-lamp" element={<ProLamp />} />
           <Route path="tirefit" element={<Tirefit />} />
         </Route>
       </Routes>

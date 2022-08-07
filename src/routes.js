@@ -21,9 +21,10 @@ export const routes = [
     },
     // {
     //     id: 5,
-    //     title: 'СТО',
-    //     route: '/service',
-    // },  {
+    //     title: 'PRO-LAMP',
+    //     route: 'https://www.sankt-peterburg.pro-lamp.ru/',
+    // },  
+    // {
     //     id: 6,
     //     title: 'Шиномонтаж',
     //     route: '/tirefit',
