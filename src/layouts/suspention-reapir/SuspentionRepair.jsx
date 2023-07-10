@@ -1,4 +1,5 @@
 import React from 'react';
+import {call} from '../../assets';
 
 
 const SuspentionRepair = () => {
@@ -23,8 +24,13 @@ const SuspentionRepair = () => {
                     </ul>
                 </div>
                 <p className='item-right-h'>
-                    Стоимость комплексной диагностики ходовой части: <span className='span-item-right'>500 рублей</span><br />
-                    Все работы выполняются с использованием современного оборудования.</p>
+                    Стоимость комплексной диагностики ходовой части: <span className='span-item-right'>750 рублей</span><br />
+                    Все работы выполняются с использованием современного оборудования.
+                </p>
+                <div className="contact_phone alternative">
+                    <img src={call} alt="call" />
+                    <a href="tel:3307115">Нажмите чтобы позвонить нам</a>
+                </div>
             </div>
         </div>
     );

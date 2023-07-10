@@ -24,14 +24,14 @@ export const routes = [
     //     title: 'PRO-LAMP',
     //     route: 'https://www.sankt-peterburg.pro-lamp.ru/',
     // },  
-    // {
-    //     id: 6,
-    //     title: 'Шиномонтаж',
-    //     route: '/tirefit',
-    // },
-    // {
-    //     id: 7,
-    //     title: 'Мойка',
-    //     route: '/carwash',
-    // },
+    {
+        id: 6,
+        title: 'Шиномонтаж',
+        route: '/tirefit',
+    },
+    {
+        id: 7,
+        title: 'Автомойка',
+        route: '/carwash',
+    },
 ] 

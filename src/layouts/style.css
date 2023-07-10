@@ -14,7 +14,6 @@
     line-height: 26px;
     height: 100vh;
     justify-content: center;
-
 }
 
 .section-grid {
@@ -63,6 +62,13 @@
     font-family: 'Nunito', sans-serif;
 }
 
+.item-right-list-tires {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: 15px auto;
+    list-style: square;
+}
 .mobile .section-item-image {
     display: none;
 }
@@ -92,7 +98,7 @@
 .section-item-right {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .section-item-left h2 {
@@ -100,6 +106,10 @@
     text-align: center;
     text-shadow: 4px 4px 2px rgb(150 150 150);
     text-transform: uppercase;
+}
+
+.conditioner-text {
+    font-size: 14px;
 }
 
 .mobile .section-item-left h2 {
@@ -128,4 +138,10 @@
 
 .mobile .section-grid {
     margin-top: 20px;
+}
+
+@media screen and (max-width: 1600px) {
+    .section {
+        height: auto;
+    }
 }

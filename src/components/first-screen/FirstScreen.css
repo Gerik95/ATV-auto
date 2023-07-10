@@ -1,6 +1,5 @@
 .react-parallax .first-screen-image {
     height: 1000px !important;
-    
 }
 .react-parallax::before {
     content: "";
@@ -12,4 +11,10 @@
     top: 0;
     right: 0;
     bottom: 0;
+}
+
+@media screen and (max-width: 500px) {
+    .react-parallax .first-screen-image {
+        height: auto !important;
+    }
 }

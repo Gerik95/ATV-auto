@@ -1,0 +1,5 @@
+.carousel {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    max-height: 500px;
+}

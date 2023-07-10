@@ -40,6 +40,7 @@ const NavMenu = () => {
                     })}>
                         <Menu />
                         <a target="_blank" className="link prolamp" href="https://www.sankt-peterburg.pro-lamp.ru/">PRO-LAMP</a>
+                        <a target="_blank" className="link rusam" href="http://www.rusam.ru/">RUSAM</a>
                     </div>
                 </div>
             </div>

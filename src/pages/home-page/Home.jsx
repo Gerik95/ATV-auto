@@ -6,11 +6,14 @@ import SuspentionRepair from "../../layouts/suspention-reapir/SuspentionRepair";
 import SuspentionCorner from "../../layouts/suspention-corner/SuspentionCorner";
 import ElectricCar from "../../layouts/electric-car/ElectricCar";
 import Tuning from "../../layouts/tuning/Tuning";
-import Tires from "../../layouts/tires/Tires";
-import Carwash from "../../layouts/carwash/Carwash";
 import firstScreen from "../../assets/images/first-screen.jpg";
-import { suspentionRepair, electricCar } from "../../assets";
+import {suspentionRepair, electricCar, conditionerbg} from '../../assets';
 import tire from '../../assets/images/tire.jpg';
+import brokeWindshield from '../../assets/images/broke-windshield.jpg';
+import Conditioner from '../../layouts/tires/Conditioner';
+import Headlights from '../../layouts/carwash/Headlights';
+import Windshield from '../../layouts/windshield/Windshield';
+import Toning from '../../layouts/toning/Toning';
 
 const Home = () => {
     const ref1 = React.useRef(null);
@@ -20,6 +23,8 @@ const Home = () => {
     const ref5 = React.useRef(null);
     const ref6 = React.useRef(null);
     const ref7 = React.useRef(null);
+    const ref8 = React.useRef(null);
+    const ref9 = React.useRef(null);
 
     const reference = {
         ref1: ref1,
@@ -29,6 +34,8 @@ const Home = () => {
         ref5: ref5,
         ref6: ref6,
         ref7: ref7,
+        ref8: ref8,
+        ref9: ref9,
     }
 
     return (
@@ -49,11 +56,17 @@ const Home = () => {
             <WrapLayout componentRef={ref5} title="Тюнинг">
                 <Tuning />
             </WrapLayout>
-            <WrapLayout parallax={tire} componentRef={ref6} title="Шиномонтаж">
-                <Tires />
+            <WrapLayout parallax={conditionerbg} componentRef={ref6} title="Заправка кондиционера">
+                <Conditioner />
             </WrapLayout>
-            <WrapLayout componentRef={ref7} title="Автомойка">
-                <Carwash />
+            <WrapLayout componentRef={ref7} title="Химическая полировка фар">
+                <Headlights />
+            </WrapLayout>
+            <WrapLayout parallax={brokeWindshield} componentRef={ref8} title="Замена и ремонт лобовых стёкол">
+                <Windshield />
+            </WrapLayout>
+            <WrapLayout componentRef={ref9} title="Защитная пленка/тонировка">
+                <Toning />
             </WrapLayout>
         </div>
 

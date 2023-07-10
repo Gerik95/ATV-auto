@@ -1,4 +1,5 @@
 import React from 'react';
+import {call} from '../../assets';
 // import { electricCar } from '../../assets';
 
 
@@ -26,8 +27,13 @@ const ElectricCar = () => {
                         <li> Настройка аудио, видео и других систем автомобиля</li>
                     </ul>
                 </div>
-                <p className='item-right-h'>Стоимость диагностики ЭБУ: <span className='span-item-right'>1250 рублей</span> <br /> Все работы выполняются с использованием современного диагностического
-                    дилерского оборудования, а так же мульти-брендовых сканеров.</p>
+                <p className='item-right-h'>Стоимость диагностики ЭБУ: <span className='span-item-right'>1050 рублей</span> <br /> Все работы выполняются с использованием современного диагностического
+                    дилерского оборудования, а так же мульти-брендовых сканеров.
+                </p>
+                <div className="contact_phone alternative">
+                    <img src={call} alt="call" />
+                    <a href="tel:3307115">Нажмите чтобы позвонить нам</a>
+                </div>
             </div>
         </div>
     );

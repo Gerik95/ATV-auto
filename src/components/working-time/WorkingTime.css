@@ -19,6 +19,10 @@
     width: 95%;
 }
 
+.phone_working {
+    color: #fc8b06;
+}
+
 .working_time_card {
     position: absolute;
     left: 50%;

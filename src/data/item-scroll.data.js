@@ -1,4 +1,14 @@
-import { engineIcon, suspensionIcon, suspensionCornerIcon, electricCarIcon, tuningIcon, tiresIcon, carwashIcon } from "../assets"
+import {
+    engineIcon,
+    suspensionIcon,
+    suspensionCornerIcon,
+    electricCarIcon,
+    tuningIcon,
+    conditionerIcon,
+    headlightsIcon,
+    windshieldIcon,
+    toningIcon
+} from '../assets'
 export const itemScrollData = [
     {
         id: 1,
@@ -32,15 +42,26 @@ export const itemScrollData = [
     },
     {
         id: 6,
-        name: "Шиномонтаж",
-        icon: tiresIcon,
+        name: "Заправка кондиционера",
+        icon: conditionerIcon,
         ref: "ref6",
     },
     {
         id: 7,
-        name: "Автомойка",
-        icon: carwashIcon,
+        name: "Химическая полировка фар",
+        icon: headlightsIcon,
         ref: "ref7",
     },
-
+    {
+        id: 8,
+        name: "Замена и ремонт лобовых стёкол",
+        icon: windshieldIcon,
+        ref: "ref8",
+    },
+    {
+        id: 8,
+        name: "Защитная пленка/тонировка",
+        icon: toningIcon,
+        ref: "ref9",
+    },
 ]

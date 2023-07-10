@@ -22,7 +22,7 @@ const Tuning = () => {
                 </div>
                 <p className='item-right-h'>
                     <div className="contact_phone">
-                        <img src={call} alt="call" />
+                        <img src={call} alt="call"/>
                         <a href="tel:+79119566857">+7 (911) 956-68-57</a>
                     </div>
                     <br />

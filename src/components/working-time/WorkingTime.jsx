@@ -33,7 +33,7 @@ const WorkingTime = ({title}) => {
                     Без обеда и выходных
                 </div> 
                 <div className="source_phone">
-                    Тел.: 330-71-15
+                    Тел.: <a className="phone_working" href="tel:+78123307115">330-71-15</a>
                 </div>
             </div>
         </div>

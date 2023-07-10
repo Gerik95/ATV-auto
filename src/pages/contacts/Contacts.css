@@ -11,6 +11,15 @@
     column-gap: 50px;
 }
 
+.contact_grid_tires {
+    border-radius: 20px;
+    padding: 40px;
+    background-color: #F2F6F7;
+    /* display: flex; */
+    align-items: center;
+    column-gap: 50px;
+}
+
 .contact_grid_text p {
     line-height: 24px;
     color: #172126;
@@ -21,6 +30,10 @@
     font-size: 48px;
     line-height: 48px;
     color: #172126;
+}
+
+.tires-h2 {
+    text-align: center;
 }
 
 .contact_grid_icon img {
@@ -41,6 +54,13 @@
     align-items: center;
     column-gap: 5px;
     margin-top: 15px;
+}
+
+.alternative a{
+    color: #ffffff !important;
+}
+.alternative a:hover{
+    color: #fc8b06 !important;
 }
 
 .contact_phone a {
