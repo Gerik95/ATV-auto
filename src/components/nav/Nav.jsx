@@ -1,23 +1,25 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { routes } from "../../routes";
-import logo from "../../logo.png";
-import "./Nav.css"
-import DehazeIcon from '@mui/icons-material/Dehaze';
-import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
-import { MobileView, isMobile } from 'react-device-detect';
-import cn from "classnames";
+import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import { routes } from '../../routes'
+import './Nav.css'
+import DehazeIcon from '@mui/icons-material/Dehaze'
+import CancelPresentationIcon from '@mui/icons-material/CancelPresentation'
+import { isMobile, MobileView } from 'react-device-detect'
+import cn from 'classnames'
 
 const NavMenu = () => {
     const [navActive, setNavActive] = useState(false);
     const Menu = () => {
-        return routes.map(route => (
-            <NavLink className="link"
-                to={route.route}
-                onClick={() => setNavActive(false)}
-                key={route.id}
-            > {route.title} </NavLink>
-        ))
+
+        return routes.map(route => {
+            return route.img ? <div className="logo"><img src={route.img} alt="logo.atv-auto" /></div> : (
+                <NavLink className={`link ${route.class}`}
+                         to={route.route}
+                         onClick={() => setNavActive(false)}
+                         key={route.id}
+                > {route.title} </NavLink>
+            )
+        })
     }
 
     const toggleHandler = () => setNavActive(prev => !prev);
@@ -33,7 +35,6 @@ const NavMenu = () => {
                     mobile: isMobile,
                     active: navActive
                 })}>
-                    <div className="logo"><img src={logo} alt="logo.atv-auto" /></div>
                     <div className={cn("nav-menu", {
                         active: navActive,
                         mobile: isMobile

@@ -8,6 +8,7 @@ import Cooperation from './pages/cooperation/Cooperation';
 import Carwash from './pages/carwash-page/Carwash';
 import ProLamp from './pages/service-page/ProLamp';
 import Tirefit from './pages/tirefit-page/Tirefit';
+import Shop from './pages/shop-page/Shop'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
+          <Route path="shop" element={<Shop />} />
           <Route path="contacts" element={<Contacts />} />
           <Route path="cooperation" element={<Cooperation />} />
           <Route path="carwash" element={<Carwash />} />

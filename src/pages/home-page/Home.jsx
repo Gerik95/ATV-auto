@@ -1,19 +1,19 @@
-import React from "react";
-import FirstScreen from "../../components/first-screen/FirstScreen";
-import WrapLayout from "../../layouts"
-import EngineRepair from "../../layouts/engine-repair/EngineRepair";
-import SuspentionRepair from "../../layouts/suspention-reapir/SuspentionRepair";
-import SuspentionCorner from "../../layouts/suspention-corner/SuspentionCorner";
-import ElectricCar from "../../layouts/electric-car/ElectricCar";
-import Tuning from "../../layouts/tuning/Tuning";
-import firstScreen from "../../assets/images/first-screen.jpg";
-import {suspentionRepair, electricCar, conditionerbg} from '../../assets';
-import tire from '../../assets/images/tire.jpg';
-import brokeWindshield from '../../assets/images/broke-windshield.jpg';
-import Conditioner from '../../layouts/tires/Conditioner';
-import Headlights from '../../layouts/carwash/Headlights';
-import Windshield from '../../layouts/windshield/Windshield';
-import Toning from '../../layouts/toning/Toning';
+import React from 'react'
+import FirstScreen from '../../components/first-screen/FirstScreen'
+import WrapLayout from '../../layouts'
+import EngineRepair from '../../layouts/engine-repair/EngineRepair'
+import SuspentionRepair from '../../layouts/suspention-reapir/SuspentionRepair'
+import SuspentionCorner from '../../layouts/suspention-corner/SuspentionCorner'
+import ElectricCar from '../../layouts/electric-car/ElectricCar'
+import Tuning from '../../layouts/tuning/Tuning'
+import firstScreen from '../../assets/images/first-screen.jpg'
+import { conditionerbg, electricCar, suspentionRepair } from '../../assets'
+import brokeWindshield from '../../assets/images/broke-windshield.jpg'
+import Conditioner from '../../layouts/tires/Conditioner'
+import Headlights from '../../layouts/carwash/Headlights'
+import Windshield from '../../layouts/windshield/Windshield'
+import Toning from '../../layouts/toning/Toning'
+import logo from '../../logo.png'
 
 const Home = () => {
     const ref1 = React.useRef(null);
@@ -40,7 +40,13 @@ const Home = () => {
 
     return (
         <div style={{ scrollBehavior: 'smooth' }}>
-            <FirstScreen itemScrollToggle componentsRef={reference} image={firstScreen} title='АВТОСЕРВИС' />
+            <FirstScreen
+                itemScrollToggle
+                componentsRef={reference}
+                image={firstScreen}
+                title='АВТОСЕРВИС'
+                doubleCard={{ title: 'ЗАПЧАСТИ', logo }}
+            />
             <WrapLayout componentRef={ref1} title="Ремонт двигателя и КПП">
                 <EngineRepair />
             </WrapLayout>
