@@ -1,37 +1,53 @@
+import { v4 as uuidv4 } from 'uuid';
+import logo from "./logo.png";
+
 export const routes = [
+
     {
-        id: 1,
+        id: uuidv4(),
+        title: 'Магазин',
+        route: '/shop',
+        class: 'shops-link'
+    },
+    {
+        id: uuidv4(),
+        class: '',
+        img: logo
+    },
+    {
+        id: uuidv4(),
         title: 'Главная',
         route: '/',
+        class: ''
     },
     {
-        id: 2,
+        id: uuidv4(),
         title: 'О нас',
         route: '/about',
+        class: ''
     },
     {
-        id: 3,
+        id: uuidv4(),
         title: 'Контакты',
         route: '/contacts',
+        class: ''
     },
     {
-        id: 4,
+        id: uuidv4(),
         title: 'Сотрудничество',
         route: '/cooperation',
+        class: ''
     },
-    // {
-    //     id: 5,
-    //     title: 'PRO-LAMP',
-    //     route: 'https://www.sankt-peterburg.pro-lamp.ru/',
-    // },  
     {
-        id: 6,
+        id: uuidv4(),
         title: 'Шиномонтаж',
         route: '/tirefit',
+        class: ''
     },
     {
-        id: 7,
+        id: uuidv4(),
         title: 'Автомойка',
         route: '/carwash',
+        class: ''
     },
 ] 
