@@ -5,6 +5,7 @@ import "./FirstScreen.css";
 import { itemScrollData } from "../../data/item-scroll.data";
 import WorkingTime from "../working-time/WorkingTime";
 import { BrowserView } from 'react-device-detect';
+import PartsTime from "../parts-time/PartsTime";
 
 const insideStyles = {
     padding: 20,
@@ -19,6 +20,7 @@ const FirstScreen = ({ componentsRef, itemScrollToggle, image, title }) => {
         <Parallax bgClassName="first-screen-image" bgImage={image} strength={500}>
             <div style={{ height: "100vh" }}>
                 <WorkingTime title={title} />
+                <PartsTime title={'ЗАПЧАСТИ'}/>
                 <BrowserView>
                     <div style={insideStyles}>
                         {itemScrollToggle && itemScrollData.map((el, index) => {

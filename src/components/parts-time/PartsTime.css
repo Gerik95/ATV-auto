@@ -1,6 +1,6 @@
-.working_time {
+.parts_time {
     position: absolute;
-    right: 17%;
+    right: 49%;
     top: 20%;
     width: 350px;
     padding: 20px;
@@ -12,18 +12,19 @@
     color: #fff;
 }
 
-.working_time.mobile, .working_time_card.mobile {
+.parts_time.mobile, .parts_time_card.mobile {
     z-index: 1;
     left: 50%;
+    top: 50%;
     transform: translateX(-50%);
-    width: 90%;
+    width: 80%;
 }
 
-.phone_working {
+.phone_parts {
     color: #fc8b06;
 }
 
-.working_time_card {
+.parts_time_card {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -38,18 +39,18 @@
     color: #fff;
 }
 
-.working_time_logo img {
+.parts_time_logo img {
     width: 50%;
 }
 
-.working_time_title {
+.parts_time_title {
     font-size: 42px;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
     margin-bottom: 20px;
 }
 
-.working_time_text {
+.parts_time_text {
     border: 2px solid #fc8b06;
     border-radius: 10px;
     padding: 5px;
