@@ -6,6 +6,7 @@ import { telegram, instagram, whatsapp, vk, call } from "../../assets";
 import { isMobile } from 'react-device-detect';
 import cn from "classnames";
 import logo from "../../logo.png";
+import {Helmet} from "react-helmet";
 
 
 const Contacts = () => {
@@ -13,6 +14,11 @@ const Contacts = () => {
         <div className={cn("", {
             mobile: isMobile
         })}>
+            <Helmet>
+                <title>ATV-Auto - Контакты </title>
+                <meta name="description"
+                      content="Автосервис Санкт-Петербург Пулково Есть вопросы или хотите сообщить о проблеме - мы всегда рады помочь!"/>
+            </Helmet>
             <FirstScreen itemScrollToggle={false} image={firstScreen} title='КОНТАКТЫ' logo={logo} />
             <div className="contact_us">
                 <div className="wrapper">

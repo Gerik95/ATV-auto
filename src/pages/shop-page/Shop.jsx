@@ -7,6 +7,7 @@ import marketlLogo from "../../assets/images/atv-market-logo.png";
 import { call } from "../../assets";
 import { isMobile } from 'react-device-detect';
 import cn from "classnames";
+import {Helmet} from "react-helmet";
 
 
 const Shop = () => {
@@ -14,6 +15,11 @@ const Shop = () => {
         <div className={cn("", {
             mobile: isMobile
         })}>
+            <Helmet>
+                <title>ATV-Auto - Магазин </title>
+                <meta name="description"
+                      content="Магазин автозапчастей Санкт-Петербург Пулково Магазин автозапчастей для легковых автомобилей по минимальным ценам с возможностью адресной доставки"/>
+            </Helmet>
             <FirstScreen itemScrollToggle={false} image={firstScreen} title='МАГАЗИН' logo={marketlLogo} />
             <div className="shop">
                 <div className="wrapper">

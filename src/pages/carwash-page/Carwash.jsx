@@ -6,12 +6,18 @@ import { telegram, instagram, whatsapp, vk, call } from "../../assets";
 import logo from "../../logo.png";
 import { isMobile } from 'react-device-detect';
 import cn from "classnames";
+import {Helmet} from "react-helmet";
 
 const Carwash = () => {
     return (
         <div className={cn("", {
             mobile: isMobile
         })}>
+            <Helmet>
+                <title>ATV-Auto - Автомойка</title>
+                <meta name="description"
+                      content="Автомойка Санкт-Петербург Пулково Экспресс-мойка Полировка кузова и фар Тонировка"/>
+            </Helmet>
             <FirstScreen itemScrollToggle={false} image={firstScreen} title='АВТОМОЙКА' logo={logo}/>
             <div className="contact_us">
                 <div className="wrapper">

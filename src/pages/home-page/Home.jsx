@@ -17,6 +17,7 @@ import Quads from '../../layouts/quads/Quads'
 import Snow from '../../layouts/snow/Snow'
 import logo from '../../assets/images/atv-market-logo.png'
 import atvLogo from "../../logo.png";
+import {Helmet} from "react-helmet";
 
 
 const Home = () => {
@@ -48,6 +49,11 @@ const Home = () => {
 
     return (
         <div style={{ scrollBehavior: 'smooth' }}>
+            <Helmet>
+                <title>ATV-Auto - Главная</title>
+                <meta name="description"
+                      content="Автосервис Санкт-Петербург Пулково Ремонт двигателя и КПП Развал-схождение Тюнинг Заправка кондиционера Ремонт снегоходов Ремонт квадроциклов"/>
+            </Helmet>
             <FirstScreen
                 itemScrollToggle
                 componentsRef={reference}

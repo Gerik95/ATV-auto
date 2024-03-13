@@ -6,6 +6,7 @@ import { telegram, instagram, whatsapp, vk, call } from "../../assets";
 import { isMobile } from 'react-device-detect';
 import cn from "classnames";
 import logo from "../../logo.png";
+import {Helmet} from "react-helmet";
 
 
 const Tirefit = () => {
@@ -13,6 +14,11 @@ const Tirefit = () => {
         <div className={cn("", {
             mobile: isMobile
         })}>
+            <Helmet>
+                <title>ATV-Auto - Шиномонтаж</title>
+                <meta name="description"
+                      content="Шиномонтаж Санкт-Петербург Пулково Сезонная смена колёс Хранение колёс Продажа шин Снятие секреток Ремонт покрышек Ремонт дисков"/>
+            </Helmet>
             <FirstScreen itemScrollToggle={false} image={firstScreen} title='ШИНОМОНТАЖ' logo={logo}/>
             <div className="contact_us">
                 <div className="wrapper">

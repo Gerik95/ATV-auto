@@ -5,6 +5,7 @@ import './Cooperation.css';
 import logo from "../../logo.png";
 import { isMobile } from 'react-device-detect';
 import cn from "classnames";
+import {Helmet} from "react-helmet";
 
 
 const Cooperation = () => {
@@ -12,6 +13,11 @@ const Cooperation = () => {
         <div className={cn("", {
             mobile: isMobile
         })}>
+            <Helmet>
+                <title>ATV-Auto - Сотрудничество </title>
+                <meta name="description"
+                      content="Автосервис Санкт-Петербург Пулково Коммерческое предложение Легковых автомобилей российских и зарубежных марок"/>
+            </Helmet>
             <FirstScreen itemScrollToggle={false} image={firstScreen} title='СОТРУДНИЧЕСТВО' logo={logo}/>
             <div className="cooperation">
                 <div className="wrapper">

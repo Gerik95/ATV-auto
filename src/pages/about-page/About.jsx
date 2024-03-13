@@ -6,6 +6,7 @@ import logo from "../../logo.png";
 import { call } from "../../assets";
 import { isMobile } from 'react-device-detect';
 import cn from "classnames";
+import {Helmet} from 'react-helmet';
 
 
 const About = () => {
@@ -13,6 +14,12 @@ const About = () => {
         <div className={cn("", {
             mobile: isMobile
         })}>
+            <Helmet>
+                <title>ATV-Auto - О Нас</title>
+                <meta name="description"
+                      content="Автосервис Санкт-Петербург Пулково Мы гарантируем, что автомобиль после обслуживания будет работать надёжно.
+                                Мы хотим, чтобы вы и ваши близкие чувствовали себя в безопасности."/>
+            </Helmet>
             <FirstScreen itemScrollToggle={false} image={firstScreen} title='О НАС' logo={logo} />
             <div className="about">
                 <div className="wrapper">
