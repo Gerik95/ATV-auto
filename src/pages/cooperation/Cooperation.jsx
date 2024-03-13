@@ -12,7 +12,7 @@ const Cooperation = () => {
         <div className={cn("", {
             mobile: isMobile
         })}>
-            <FirstScreen itemScrollToggle={false} image={firstScreen} title='СОТРУДНИЧЕСТВО' />
+            <FirstScreen itemScrollToggle={false} image={firstScreen} title='СОТРУДНИЧЕСТВО' logo={logo}/>
             <div className="cooperation">
                 <div className="wrapper">
                     <div className="cooperation_info block_wrap">

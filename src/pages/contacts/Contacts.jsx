@@ -5,13 +5,15 @@ import './Contacts.css';
 import { telegram, instagram, whatsapp, vk, call } from "../../assets";
 import { isMobile } from 'react-device-detect';
 import cn from "classnames";
+import logo from "../../logo.png";
+
 
 const Contacts = () => {
     return (
         <div className={cn("", {
             mobile: isMobile
         })}>
-            <FirstScreen itemScrollToggle={false} image={firstScreen} title='КОНТАКТЫ' />
+            <FirstScreen itemScrollToggle={false} image={firstScreen} title='КОНТАКТЫ' logo={logo} />
             <div className="contact_us">
                 <div className="wrapper">
                     <div className="contact_grid">

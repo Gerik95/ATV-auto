@@ -1,18 +1,17 @@
 import React from 'react'
 import './WorkingTime.css'
-import logo from '../../logo.png'
 import cn from 'classnames'
 import { useLocation } from 'react-router-dom'
 import { isMobile } from 'react-device-detect'
 
 
-const WorkingTime = ({ title, doubleCard }) => {
+const WorkingTime = ({ title, doubleCard, logo }) => {
 
     const { pathname } = useLocation()
     const pathnameClass = pathname === '/' ? 'working_time' : 'working_time_card'
 
     return (
-        <div style={{ maxWidth: doubleCard ? '600px' : '350px' }} className={cn(pathnameClass, {
+        <div style={{ maxWidth: doubleCard ? '600px' : '450px' }} className={cn(pathnameClass, {
             mobile: isMobile
         })}>
             <div className="working-time-top-wrapper">

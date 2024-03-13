@@ -13,7 +13,7 @@ const About = () => {
         <div className={cn("", {
             mobile: isMobile
         })}>
-            <FirstScreen itemScrollToggle={false} image={firstScreen} title='О НАС' />
+            <FirstScreen itemScrollToggle={false} image={firstScreen} title='О НАС' logo={logo} />
             <div className="about">
                 <div className="wrapper">
                     <div className="about_best block_wrap">

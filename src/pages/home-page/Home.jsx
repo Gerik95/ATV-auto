@@ -16,6 +16,8 @@ import Toning from '../../layouts/toning/Toning'
 import Quads from '../../layouts/quads/Quads'
 import Snow from '../../layouts/snow/Snow'
 import logo from '../../assets/images/atv-market-logo.png'
+import atvLogo from "../../logo.png";
+
 
 const Home = () => {
     const ref1 = React.useRef(null);
@@ -51,6 +53,7 @@ const Home = () => {
                 componentsRef={reference}
                 image={firstScreen}
                 title='АВТОСЕРВИС'
+                logo={atvLogo}
                 doubleCard={{ title: 'ЗАПЧАСТИ', logo }}
             />
             <WrapLayout componentRef={ref1} title="Ремонт двигателя и КПП">

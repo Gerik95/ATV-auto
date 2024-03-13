@@ -3,6 +3,7 @@ import FirstScreen from "../../components/first-screen/FirstScreen";
 import firstScreen from "../../assets/images/carwash.jpg";
 import './Carwash.css';
 import { telegram, instagram, whatsapp, vk, call } from "../../assets";
+import logo from "../../logo.png";
 import { isMobile } from 'react-device-detect';
 import cn from "classnames";
 
@@ -11,7 +12,7 @@ const Carwash = () => {
         <div className={cn("", {
             mobile: isMobile
         })}>
-            <FirstScreen itemScrollToggle={false} image={firstScreen} title='АВТОМОЙКА' />
+            <FirstScreen itemScrollToggle={false} image={firstScreen} title='АВТОМОЙКА' logo={logo}/>
             <div className="contact_us">
                 <div className="wrapper">
                     <div className="contact_grid_tires">

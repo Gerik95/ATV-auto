@@ -3,6 +3,7 @@ import FirstScreen from "../../components/first-screen/FirstScreen";
 import firstScreen from "../../assets/images/shop.JPG";
 import './Shop.css';
 import logo from "../../logo.png";
+import marketlLogo from "../../assets/images/atv-market-logo.png";
 import { call } from "../../assets";
 import { isMobile } from 'react-device-detect';
 import cn from "classnames";
@@ -13,7 +14,7 @@ const Shop = () => {
         <div className={cn("", {
             mobile: isMobile
         })}>
-            <FirstScreen itemScrollToggle={false} image={firstScreen} title='МАГАЗИН' />
+            <FirstScreen itemScrollToggle={false} image={firstScreen} title='МАГАЗИН' logo={marketlLogo} />
             <div className="shop">
                 <div className="wrapper">
                     <div className="shop_company block_wrap">

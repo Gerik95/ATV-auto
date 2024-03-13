@@ -5,13 +5,15 @@ import './Tirefit.css';
 import { telegram, instagram, whatsapp, vk, call } from "../../assets";
 import { isMobile } from 'react-device-detect';
 import cn from "classnames";
+import logo from "../../logo.png";
+
 
 const Tirefit = () => {
     return (
         <div className={cn("", {
             mobile: isMobile
         })}>
-            <FirstScreen itemScrollToggle={false} image={firstScreen} title='ШИНОМОНТАЖ' />
+            <FirstScreen itemScrollToggle={false} image={firstScreen} title='ШИНОМОНТАЖ' logo={logo}/>
             <div className="contact_us">
                 <div className="wrapper">
                     <div className="contact_grid_tires">
