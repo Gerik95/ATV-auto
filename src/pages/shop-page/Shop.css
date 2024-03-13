@@ -1,0 +1,61 @@
+.shop {
+    padding: 50px 0;
+}
+
+.shop_best_logo img {
+    width: 350px;
+}
+
+.shop_best {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 350px;
+}
+
+.shop_best_text h4 {
+    font-weight: 800;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.shop_best_text p {
+    font-size: 18px;
+}
+
+.shop_company {
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: 80px;
+    margin-top: 50px;
+}
+
+.shop_company h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.shop_company p {
+    font-size: 18px;
+}
+
+.shop_company h4 {
+    font-size: 20px;
+}
+
+.contact_phone {
+    justify-content: center;
+}
+
+.mobile .shop_best_logo {
+    display: none;
+}
+
+.mobile .shop_best_text {
+    text-align: center;
+}
+
+.mobile .shop_company {
+    margin-bottom: 20px;
+}

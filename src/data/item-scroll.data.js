@@ -7,8 +7,10 @@ import {
     conditionerIcon,
     headlightsIcon,
     windshieldIcon,
-    toningIcon
-} from '../assets'
+    toningIcon,
+    quadIcon,
+    snowIcon
+} from '../assets/'
 export const itemScrollData = [
     {
         id: 1,
@@ -59,9 +61,21 @@ export const itemScrollData = [
         ref: "ref8",
     },
     {
-        id: 8,
+        id: 9,
         name: "Защитная пленка/тонировка",
         icon: toningIcon,
         ref: "ref9",
+    },
+    {
+        id: 10,
+        name: "Ремонт квадроциклов",
+        icon: quadIcon,
+        ref: "ref10",
+    },
+    {
+        id: 11,
+        name: "Ремонт снегоходов",
+        icon: snowIcon,
+        ref: "ref11",
     },
 ]

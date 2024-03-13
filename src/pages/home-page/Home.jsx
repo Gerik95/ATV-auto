@@ -13,7 +13,9 @@ import Conditioner from '../../layouts/tires/Conditioner'
 import Headlights from '../../layouts/carwash/Headlights'
 import Windshield from '../../layouts/windshield/Windshield'
 import Toning from '../../layouts/toning/Toning'
-import logo from '../../logo.png'
+import Quads from '../../layouts/quads/Quads'
+import Snow from '../../layouts/snow/Snow'
+import logo from '../../assets/images/atv-market-logo.png'
 
 const Home = () => {
     const ref1 = React.useRef(null);
@@ -25,6 +27,8 @@ const Home = () => {
     const ref7 = React.useRef(null);
     const ref8 = React.useRef(null);
     const ref9 = React.useRef(null);
+    const ref10 = React.useRef(null);
+    const ref11 = React.useRef(null);
 
     const reference = {
         ref1: ref1,
@@ -36,6 +40,8 @@ const Home = () => {
         ref7: ref7,
         ref8: ref8,
         ref9: ref9,
+        ref10: ref10,
+        ref11: ref11,
     }
 
     return (
@@ -73,6 +79,12 @@ const Home = () => {
             </WrapLayout>
             <WrapLayout componentRef={ref9} title="Защитная пленка/тонировка">
                 <Toning />
+            </WrapLayout>
+            <WrapLayout parallax={brokeWindshield} componentRef={ref10} title="Ремонт квадроциклов">
+                <Quads />
+            </WrapLayout>
+            <WrapLayout componentRef={ref11} title="Ремонт снегоходов">
+                <Snow />
             </WrapLayout>
         </div>
 

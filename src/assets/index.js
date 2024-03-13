@@ -5,6 +5,8 @@ import suspensionCornerIcon from "./images/suspension_corner.svg";
 import suspensionIcon from "./images/suspension.svg";
 import tiresIcon from "./images/tires.svg";
 import tuningIcon from "./images/tuning.svg";
+import quadIcon from "./images/quadIcon.svg"
+import snowIcon from "./images/snowIcon.svg"
 import engineRepair from "./images/engine-repair.jpg";
 import suspentionCorner from "./images/suspention-corner.jpg";
 import electricCar from "./images/electric-car.jpg";
@@ -45,6 +47,8 @@ export {
     suspensionIcon,
     tiresIcon,
     tuningIcon,
+    quadIcon,
+    snowIcon,
     engineRepair,
     suspentionCorner,
     electricCar,

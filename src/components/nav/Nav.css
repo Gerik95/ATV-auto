@@ -100,8 +100,20 @@
 
 .shops-link {
     margin-right: 50px;
+    background-color: #fc8b06;
+    color: #fff;
+    border-radius: 6px;
 }
 
+.shops-link:hover {
+    color: #fc8b06;
+    background-color: transparent;
+}
+
+.shops-link.active {
+    color: #fc8b06;
+    background-color: transparent;
+}
 @media screen and (max-width: 992px) {
     
 }

@@ -19,7 +19,6 @@ const FirstScreen = ({ componentsRef, itemScrollToggle, image, title, doubleCard
         <Parallax bgClassName="first-screen-image" bgImage={image} strength={500}>
             <div className="first-screen-wrapper" style={{ height: "100vh" }}>
                 <WorkingTime title={title} doubleCard={doubleCard} />
-                {/*<PartsTime title={'ЗАПЧАСТИ'}/>*/}
                 <BrowserView>
                     <div style={insideStyles}>
                         {itemScrollToggle && itemScrollData.map((el, index) => {
