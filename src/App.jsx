@@ -10,6 +10,8 @@ import ProLamp from './pages/service-page/ProLamp';
 import Tirefit from './pages/tirefit-page/Tirefit';
 import Shop from './pages/shop-page/Shop'
 
+import '@elastic/eui/dist/eui_theme_light.css';
+
 
 function App() {
   return (

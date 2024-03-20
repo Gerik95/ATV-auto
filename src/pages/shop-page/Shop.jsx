@@ -8,6 +8,7 @@ import { call } from "../../assets";
 import { isMobile } from 'react-device-detect';
 import cn from "classnames";
 import {Helmet} from "react-helmet";
+import Form from "../../components/Form/Form";
 
 
 const Shop = () => {
@@ -37,7 +38,6 @@ const Shop = () => {
                             а вот найти действительно лучшую цену на качественный товар с полным пакетом документов порой оказывается задачей не из легких, в решении которой мы Вам обязательно поможем!
                         </p>
 
-                        <p className="cooperation_info_text"></p>
 
                         <p className="cooperation_info_text"> Рассчитать стоимость нужных Вам деталей и оформить заказ можно в Direct или по телефону: ⠀
                             <div className="contact_phone">
@@ -70,7 +70,7 @@ const Shop = () => {
                             </p>
                         </div>
                         <div className="ashop_best_logo">
-                            <img src={logo} alt="ATV" />
+                            <Form/>
                         </div>
                     </div>
                 </div>

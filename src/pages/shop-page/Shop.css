@@ -7,10 +7,13 @@
 }
 
 .shop_best {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 350px;
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+    /*gap: 350px;*/
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    column-gap: 50px;
 }
 
 .shop_best_text h4 {
