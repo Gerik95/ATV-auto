@@ -2,7 +2,6 @@ import React from "react";
 import FirstScreen from "../../components/first-screen/FirstScreen";
 import firstScreen from "../../assets/images/shop.JPG";
 import './Shop.css';
-import logo from "../../logo.png";
 import marketlLogo from "../../assets/images/atv-market-logo.png";
 import { call } from "../../assets";
 import { isMobile } from 'react-device-detect';
@@ -39,7 +38,7 @@ const Shop = () => {
                         </p>
 
 
-                        <p className="cooperation_info_text"> Рассчитать стоимость нужных Вам деталей и оформить заказ можно в Direct или по телефону: ⠀
+                        <p className="cooperation_info_text"> Заполните форму ниже и получите предложения по интересующим Вас деталям ⠀
                             <div className="contact_phone">
                                 <img src={call} alt="call" />
                                 <a href="tel:+78123307115">+7 (812) 330-71-15</a>

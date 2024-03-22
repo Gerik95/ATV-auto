@@ -1,0 +1,3 @@
+.euiFieldText:focus {
+    background-image: linear-gradient(to top, #fc8b06, #fc8b06 2px, transparent 2px, transparent 100%)!important;
+}
