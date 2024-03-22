@@ -94,6 +94,14 @@
     color: #fc8b06;
 }
 
+.color-orange {
+    color: #fc8b06;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
 .section-item-left,
 .section-item-right {
     display: flex;
@@ -143,5 +151,8 @@
 @media screen and (max-width: 1600px) {
     .section {
         height: auto;
+    }
+    .form-wrapper {
+        margin-top: 30px;
     }
 }

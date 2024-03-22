@@ -1,3 +1,17 @@
-.euiFieldText:focus {
+.euiFieldText:focus, .euiTextArea:focus, .euiFieldNumber:focus {
     background-image: linear-gradient(to top, #fc8b06, #fc8b06 2px, transparent 2px, transparent 100%)!important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.message-error {
+    color: red;
+    font-size: 12px;
+    margin-left: 5px;
+    margin-top: 3px;
 }

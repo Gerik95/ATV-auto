@@ -115,5 +115,9 @@
     background-color: transparent;
 }
 @media screen and (max-width: 992px) {
-    
+    .shops-link {
+        position: absolute;
+        top: 15px;
+        left: 20px;
+    }
 }
