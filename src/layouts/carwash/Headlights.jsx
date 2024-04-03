@@ -5,7 +5,6 @@ import {call} from '../../assets';
 
 
 const Headlights = () => {
-    console.log(headlightsCarouselData, 'data')
     return (
         <div className="carwash section-item block_wrap">
             <div className="section-item-right">

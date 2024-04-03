@@ -47,7 +47,7 @@ const Shop = () => {
                         </p>
 
 
-                        <p className="cooperation_info_text"> Заполните форму ниже и получите предложения по
+                        <p className="cooperation_info_text"> <span className='span-item-right'>Заполните форму ниже</span> и получите предложения по
                             интересующим Вас деталям ⠀
                             <div className="contact_phone">
                                 <img src={call} alt="call"/>

@@ -5,9 +5,15 @@ export const routes = [
 
     {
         id: uuidv4(),
-        title: 'Магазин',
+        title: 'VIN-подбор',
         route: '/shop',
         class: 'shops-link'
+    },
+    {
+        id: uuidv4(),
+        title: 'Мотоборды',
+        route: '/motoboard',
+        class: 'motoboard-link'
     },
     {
         id: uuidv4(),

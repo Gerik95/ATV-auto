@@ -4,7 +4,7 @@ import { routes } from '../../routes'
 import './Nav.css'
 import DehazeIcon from '@mui/icons-material/Dehaze'
 import CancelPresentationIcon from '@mui/icons-material/CancelPresentation'
-import { isMobile, MobileView } from 'react-device-detect'
+import { isMobile, MobileView, TabletView, isTablet, deviceType } from 'react-device-detect'
 import cn from 'classnames'
 
 const NavMenu = () => {
@@ -12,7 +12,7 @@ const NavMenu = () => {
     const Menu = () => {
 
         return routes.map(route => {
-            return route.img ? <div className="logo"><img src={route.img} alt="logo.atv-auto" /></div> : (
+            return route.img ? <div className="logo"><img src={route.img} alt="logo.atv-auto"/></div> : (
                 <NavLink className={`link ${route.class}`}
                          to={route.route}
                          onClick={() => setNavActive(false)}
@@ -25,23 +25,22 @@ const NavMenu = () => {
     const toggleHandler = () => setNavActive(prev => !prev);
     const menuIcon = navActive ?
         (<CancelPresentationIcon className="cancel-icon" />) : (<DehazeIcon className="dehaze-icon" />)
+
     return (
         <header className="header">
-            <MobileView>
-                <div className="menu-button" onClick={toggleHandler}>{menuIcon}</div>
-            </MobileView>
+            {(isMobile || isTablet) && <div className="menu-button" onClick={toggleHandler}>{menuIcon}</div>}
             <div className="wrapper">
                 <div className={cn("headerGrid", {
-                    mobile: isMobile,
+                    mobile: isMobile || isTablet,
                     active: navActive
                 })}>
                     <div className={cn("nav-menu", {
                         active: navActive,
-                        mobile: isMobile
+                        mobile: isMobile || isTablet,
                     })}>
                         <Menu />
                         <a target="_blank" className="link prolamp" href="https://www.sankt-peterburg.pro-lamp.ru/">PRO-LAMP</a>
-                        <a target="_blank" className="link rusam" href="http://www.rusam.ru/">RUSAM</a>
+                        <a target="_blank" className="link rusam" href="https://www.rusam.ru/">RUSAM</a>
                     </div>
                 </div>
             </div>

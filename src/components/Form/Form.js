@@ -1,9 +1,7 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {EuiButton, EuiFieldText, EuiForm, EuiFormRow, EuiTextArea, EuiFieldNumber} from '@elastic/eui';
 import emailjs from '@emailjs/browser';
 import {ToastContainer, toast} from 'react-toastify';
-
-import {object, string, number, date, InferType} from 'yup';
 
 import 'react-toastify/dist/ReactToastify.css';
 import './Form.css';
@@ -121,7 +119,6 @@ const Form = () => {
             setFieldsValue(defaultFieldsValue);
             setErrors({});
             notifySuccess();
-
         } catch (error) {
             console.log('FAILED...', error);
             notifyError();
@@ -133,7 +130,7 @@ const Form = () => {
             case EuiFieldText:
                 return (
                     <>
-                        <EuiFieldText value={item.value} name={item.name} onChange={(event) => onChange(event, item.name)}
+                        <EuiFieldText value={fieldsValue[item.name]} name={item.name} onChange={(event) => onChange(event, item.name)}
                                       placeholder={item.placeholder}/>
                         {errors[item.name] && <p className='message-error'>{errors[item.name]}</p>}
                     </>
@@ -141,7 +138,7 @@ const Form = () => {
             case EuiFieldNumber:
                 return (
                     <>
-                        <EuiFieldNumber value={item.value} name={item.name} onChange={(event) => onChange(event, item.name)}
+                        <EuiFieldNumber value={fieldsValue[item.name]} name={item.name} onChange={(event) => onChange(event, item.name)}
                                         placeholder={item.placeholder}/>
                         {errors[item.name] && <p className='message-error'>{errors[item.name]}</p>}
                     </>
@@ -149,7 +146,7 @@ const Form = () => {
             case EuiTextArea:
                 return (
                     <>
-                        <EuiTextArea value={item.value} name={item.name} onChange={(event) => onChange(event, item.name)}
+                        <EuiTextArea value={fieldsValue[item.name]} name={item.name} onChange={(event) => onChange(event, item.name)}
                                      placeholder={item.placeholder}/>
                         {errors[item.name] && <p className='message-error'>{errors[item.name]}</p>}
                     </>

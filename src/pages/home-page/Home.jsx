@@ -89,12 +89,12 @@ const Home = () => {
             <WrapLayout componentRef={ref9} title="Защитная пленка/тонировка">
                 <Toning />
             </WrapLayout>
-            <WrapLayout parallax={brokeWindshield} componentRef={ref10} title="Ремонт квадроциклов">
-                <Quads />
-            </WrapLayout>
-            <WrapLayout componentRef={ref11} title="Ремонт снегоходов">
-                <Snow />
-            </WrapLayout>
+            {/*<WrapLayout parallax={brokeWindshield} componentRef={ref10} title="Ремонт квадроциклов">*/}
+            {/*    <Quads />*/}
+            {/*</WrapLayout>*/}
+            {/*<WrapLayout componentRef={ref11} title="Ремонт снегоходов">*/}
+            {/*    <Snow />*/}
+            {/*</WrapLayout>*/}
         </div>
 
     )

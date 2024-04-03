@@ -13,7 +13,7 @@ const ItemScroll = ({ text, img, index, componentRef }) => {
     };
     
     return (
-        <div onClick={buttonHandler(componentRef)} className="item-scroll" style={{ top: (index * 60) + 165 }}> {/*previosly = 240*/}
+        <div onClick={buttonHandler(componentRef)} className="item-scroll" style={{ top: (index * 60) + 220 }}> {/*previosly = 240*/}
             <div className="item-scroll-text">
                 {text}
             </div>

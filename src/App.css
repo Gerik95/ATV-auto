@@ -18,7 +18,7 @@ ul {
 .wrapper {
     width: 100%;
     max-width: 1360px;
-    padding: 0 50px;
+    padding: 0 10px;
     box-sizing: border-box;
     margin: 0 auto;
 }

@@ -66,16 +66,16 @@ export const itemScrollData = [
         icon: toningIcon,
         ref: "ref9",
     },
-    {
-        id: 10,
-        name: "Ремонт квадроциклов",
-        icon: quadIcon,
-        ref: "ref10",
-    },
-    {
-        id: 11,
-        name: "Ремонт снегоходов",
-        icon: snowIcon,
-        ref: "ref11",
-    },
+    // {
+    //     id: 10,
+    //     name: "Ремонт квадроциклов",
+    //     icon: quadIcon,
+    //     ref: "ref10",
+    // },
+    // {
+    //     id: 11,
+    //     name: "Ремонт снегоходов",
+    //     icon: snowIcon,
+    //     ref: "ref11",
+    // },
 ]
