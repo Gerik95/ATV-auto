@@ -22,11 +22,11 @@ const SuspentionCorner = () => {
                     </ul>
                 </div>
                 <p className="item-right-h">
-                    Стоимость диагностики развал-схождение: <span className="span-item-right">750 рублей</span> <br/>
+                    Стоимость диагностики развал-схождение: <span className="span-item-right">1050 рублей</span> <br/>
                     Развал-схождение легкового автомобиля(1 ось): <span
-                    className="span-item-right">1800 рублей</span><br/>
+                    className="span-item-right">1950 рублей</span><br/>
                     Развал-схождение легкового автомобиля(2 оси): <span
-                    className="span-item-right">2400 рублей</span><br/>
+                    className="span-item-right">2550 рублей</span><br/>
                     Все работы выполняются с использованием современного
                     оборудования.
                 </p>

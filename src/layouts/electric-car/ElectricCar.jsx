@@ -27,7 +27,7 @@ const ElectricCar = () => {
                         <li> Настройка аудио, видео и других систем автомобиля</li>
                     </ul>
                 </div>
-                <p className='item-right-h'>Стоимость диагностики ЭБУ: <span className='span-item-right'>1050 рублей</span> <br /> Все работы выполняются с использованием современного диагностического
+                <p className='item-right-h'>Стоимость диагностики ЭБУ: <span className='span-item-right'>1500 рублей</span> <br /> Все работы выполняются с использованием современного диагностического
                     дилерского оборудования, а так же мульти-брендовых сканеров.
                 </p>
                 <div className="contact_phone alternative">

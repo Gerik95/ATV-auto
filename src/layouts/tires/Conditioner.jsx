@@ -33,7 +33,7 @@ const Conditioner = () => {
                     </p>
                 </div>
                 <p className="item-right-h">
-                    Цены на заправку кондиционера <span className="span-item-right">от 3600 рублей</span> <br/>
+                    Цены на заправку кондиционера <span className="span-item-right">от 2700 рублей</span> <br/>
                     Все работы выполняются с использованием современного оборудования.
                 </p>
                 <div className="contact_phone alternative">

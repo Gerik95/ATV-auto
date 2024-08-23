@@ -61,6 +61,7 @@ const Home = () => {
                 title='АВТОСЕРВИС'
                 logo={atvLogo}
                 doubleCard={{ title: 'ЗАПЧАСТИ', logo }}
+
             />
             <WrapLayout componentRef={ref1} title="Ремонт двигателя и КПП">
                 <EngineRepair />
