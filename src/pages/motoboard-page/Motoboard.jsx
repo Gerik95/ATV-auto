@@ -7,7 +7,8 @@ import sibmaster3 from "../../assets/images/sibmaster3.png"
 import sibmasterPro from "../../assets/images/sibmasterPro.png"
 import FirstScreen from "../../components/first-screen/FirstScreen";
 import Card from "./Card";
-
+import simbaster3 from "./json/sibmaster3.json"
+import simbasterPro from "./json/sibmasterPro.json"
 
 
 const Motoboard = () => {
@@ -66,8 +67,8 @@ const Motoboard = () => {
                         <div className="catalog">
                             <h1 className="title-text">Каталог</h1>
                             <div className="catalog-cards">
-                                <Card title='SIBMASTER 3 (2024)' subtitle='Двигатель: 9 л.с.' boardImage={sibmaster3}/>
-                                <Card title='SIBMASTER PRO' subtitle='Двигатель: 8 л.с.' boardImage={sibmasterPro}/>
+                                <Card title='SIBMASTER 3 (2024)' subtitle='Двигатель: 9 л.с.' boardImage={sibmaster3} technicalData={simbaster3} />
+                                <Card title='SIBMASTER PRO' subtitle='Двигатель: 8 л.с.' boardImage={sibmasterPro} technicalData={simbasterPro}/>
                             </div>
 
                         </div>
