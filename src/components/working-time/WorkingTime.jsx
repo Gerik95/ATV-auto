@@ -1,41 +1,35 @@
 import React from 'react'
 import './WorkingTime.css'
 import cn from 'classnames'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { isMobile } from 'react-device-detect'
+import TimeBlock from './TimeBlock'
 
 
-const WorkingTime = ({ title, doubleCard, logo }) => {
+const WorkingTime = ({ title, doubleCard, logo, addClass }) => {
 
     const { pathname } = useLocation()
     const pathnameClass = pathname === '/' ? 'working_time' : 'working_time_card'
-
+    console.log('console.log(itemLogo)', logo)
     return (
-        <div style={{ maxWidth: doubleCard ? '600px' : '450px' }} className={cn(pathnameClass, {
+        <div style={{ maxWidth: doubleCard ? '900px' : '450px' }} className={cn(pathnameClass, {
             mobile: isMobile
         })}>
             <div className="working-time-top-wrapper">
-                <div className="working-time-top">
-                    <div className="working_time_title">
-                        {title}
-                    </div>
-
-                    <div className="working_time_logo">
-                        <img src={logo} alt="Logo"/>
-                    </div>
-                </div>
-                {doubleCard && (
-                    <>
-                        <div className="working-time-top">
-                            <div className="working_time_title">
-                                {doubleCard.title}
-                            </div>
-
-                            <div className="working_time_logo">
-                                <img src={doubleCard.logo} alt="Logo"/>
-                            </div>
-                        </div>
-                    </>
+                <TimeBlock title={title} addClass={addClass} logo={logo}/>
+                {doubleCard?.length && (
+                    doubleCard.map((item) => {
+                        return item?.isLink ? (
+                                <Link to="/motoboard" className="working-time-top">
+                                    <TimeBlock title={item.title} addClass={item.addClass} logo={item.logo}/>
+                                </Link>
+                            ) :
+                            (
+                                <div className="working-time-top">
+                                    <TimeBlock title={item.title} addClass={item.addClass} logo={item.logo}/>
+                                </div>
+                            )
+                    })
                 )}
             </div>
 

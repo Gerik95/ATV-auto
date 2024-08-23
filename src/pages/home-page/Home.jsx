@@ -60,7 +60,7 @@ const Home = () => {
                 image={firstScreen}
                 title='АВТОСЕРВИС'
                 logo={atvLogo}
-                doubleCard={{ title: 'ЗАПЧАСТИ', logo }}
+                doubleCard={[{ title: 'МАГАЗИН МОТОТЕХНИКИ', logo, isLink: true }, { title: 'ЗАПЧАСТИ', logo, addClass: 'size-36' }]}
 
             />
             <WrapLayout componentRef={ref1} title="Ремонт двигателя и КПП">

@@ -20,17 +20,21 @@
 }
 
 .working-time-top {
+    display: block;
     position: relative;
 }
 
-.working-time-top:nth-child(2)::before {
-    content: '|';
+.working-time-top:nth-child(2)::before, .working-time-top:nth-child(3)::before {
+    content: '';
     display: block;
     position: absolute;
     font-size: 42px;
+    width: 2px;
+    height: 100px;
     font-weight: 600;
-    left: -16px;
-    color: #fc8b06;
+    top: 0;
+    left: -21px;
+    background-color: #fc8b06;
 }
 
 .working_time.mobile, .working_time_card.mobile {
