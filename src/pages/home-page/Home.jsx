@@ -13,13 +13,12 @@ import Conditioner from '../../layouts/tires/Conditioner'
 import Headlights from '../../layouts/carwash/Headlights'
 import Windshield from '../../layouts/windshield/Windshield'
 import Toning from '../../layouts/toning/Toning'
-import Quads from '../../layouts/quads/Quads'
-import Snow from '../../layouts/snow/Snow'
 import logo from '../../assets/images/atv-market-logo.png'
-import atvLogo from "../../logo.png";
-import {Helmet} from "react-helmet";
+import atvLogo from '../../logo.png'
+import atvBoardLogo from '../../assets/images/atv-snowboards-logo.png'
+import { Helmet } from 'react-helmet'
 
-
+    console.log('atvBoardLogo', atvBoardLogo)
 const Home = () => {
     const ref1 = React.useRef(null);
     const ref2 = React.useRef(null);
@@ -55,12 +54,13 @@ const Home = () => {
                       content="Автосервис Санкт-Петербург Пулково Ремонт двигателя и КПП Развал-схождение Тюнинг Заправка кондиционера Ремонт снегоходов Ремонт квадроциклов"/>
             </Helmet>
             <FirstScreen
+                className="home-page"
                 itemScrollToggle
                 componentsRef={reference}
                 image={firstScreen}
                 title='АВТОСЕРВИС'
                 logo={atvLogo}
-                doubleCard={[{ title: 'МАГАЗИН МОТОТЕХНИКИ', logo, isLink: true }, { title: 'ЗАПЧАСТИ', logo, addClass: 'size-36' }]}
+                doubleCard={[{ title: 'МАГАЗИН МОТОТЕХНИКИ', logo: atvBoardLogo, isLink: true }, { title: 'ЗАПЧАСТИ', logo, addClass: 'size-36' }]}
 
             />
             <WrapLayout componentRef={ref1} title="Ремонт двигателя и КПП">

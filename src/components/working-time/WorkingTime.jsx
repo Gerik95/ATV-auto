@@ -10,7 +10,7 @@ const WorkingTime = ({ title, doubleCard, logo, addClass }) => {
 
     const { pathname } = useLocation()
     const pathnameClass = pathname === '/' ? 'working_time' : 'working_time_card'
-    console.log('console.log(itemLogo)', logo)
+    console.log('ssss', logo)
     return (
         <div style={{ maxWidth: doubleCard ? '900px' : '450px' }} className={cn(pathnameClass, {
             mobile: isMobile
@@ -19,6 +19,7 @@ const WorkingTime = ({ title, doubleCard, logo, addClass }) => {
                 <TimeBlock title={title} addClass={addClass} logo={logo}/>
                 {doubleCard?.length && (
                     doubleCard.map((item) => {
+                        console.log('item', item)
                         return item?.isLink ? (
                                 <Link to="/motoboard" className="working-time-top">
                                     <TimeBlock title={item.title} addClass={item.addClass} logo={item.logo}/>

@@ -14,10 +14,10 @@ const insideStyles = {
     transform: "translate(-50%,-50%)",
     zIndex: 2,
 };
-const FirstScreen = ({ componentsRef, itemScrollToggle, image, title, doubleCard, logo }) => {
+const FirstScreen = ({ componentsRef, itemScrollToggle, image, title, doubleCard, logo, className = '' }) => {
     return (
         <Parallax bgClassName="first-screen-image" bgImage={image} strength={500}>
-            <div className="first-screen-wrapper" style={{ height: "100vh" }}>
+            <div className={`first-screen-wrapper ${className}`} style={{ height: "100vh" }}>
                 <WorkingTime title={title} doubleCard={doubleCard} logo={logo} addClass="size-36"/>
                 <BrowserView>
                     <div style={insideStyles}>

@@ -1,7 +1,7 @@
 import React from 'react'
 
 const TimeBlock = ({ title, addClass, logo }) => {
-
+    console.log('asd', logo)
     return (
         <div className="working-time-top">
             <div className={`working_time_title ${addClass ?? ''}`}>

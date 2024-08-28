@@ -1,16 +1,16 @@
-import React from 'react';
-import './Motoboard.css';
-import {Helmet} from "react-helmet";
-import firstScreen from "../../assets/images/motoboard-first-screen.webp";
-import logo from "../../logo.png";
-import sibmaster3 from "../../assets/images/sibmaster3.png";
-import sibmasterPro from "../../assets/images/sibmasterPro.png";
-import sibmasterDrive from "../../assets/images/sibmasterDrive.png";
-import FirstScreen from "../../components/first-screen/FirstScreen";
-import Card from "./Card";
-import infoSibmaster3 from "./json/infoSibmaster3.json";
-import infoSibmasterPro from "./json/infoSibmasterPro.json";
-import infoSibmasterDrive from "./json/infoSibmasterDrive.json";
+import React from 'react'
+import './Motoboard.css'
+import { Helmet } from 'react-helmet'
+import firstScreen from '../../assets/images/motoboard-first-screen.webp'
+import sibmaster3 from '../../assets/images/sibmaster3.png'
+import sibmasterPro from '../../assets/images/sibmasterPro.png'
+import sibmasterDrive from '../../assets/images/sibmasterDrive.png'
+import FirstScreen from '../../components/first-screen/FirstScreen'
+import Card from './Card'
+import infoSibmaster3 from './json/infoSibmaster3.json'
+import infoSibmasterPro from './json/infoSibmasterPro.json'
+import infoSibmasterDrive from './json/infoSibmasterDrive.json'
+import atvBoardLogo from '../../assets/images/atv-snowboards-logo.png'
 
 
 const Motoboard = () => {
@@ -21,7 +21,7 @@ const Motoboard = () => {
                 <meta name="description"
                       content="Автосервис Санкт-Петербург Пулково Мото-Сноуборды дилер Сибмастер мотосноуборд мотособака Sibmaster"/>
             </Helmet>
-            <FirstScreen itemScrollToggle={false} image={firstScreen} title='МОТО-СНОУБОРДЫ' logo={logo}/>
+            <FirstScreen itemScrollToggle={false} image={firstScreen} title='МОТО-СНОУБОРДЫ' logo={atvBoardLogo}/>
             <div className="contact_us">
                 <div className="wrapper">
                     <div className="contact_grid">
