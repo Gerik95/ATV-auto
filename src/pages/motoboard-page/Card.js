@@ -18,6 +18,9 @@ const Card = ({ boardImage, title, subtitle, technicalData }) => {
                     <div className="card-color-item color-red"/>
                     <div className="card-color-item color-orange"/>
                     <div className="card-color-item color-blue"/>
+                    <div className="card-color-item color-green"/>
+                    <div className="card-color-item color-white"/>
+                    <div className="card-color-item color-black"/>
                 </div>
                 <img src={boardImage} alt="Moto Snow Board"/>
                 <h5 className="card-title">{title}</h5>

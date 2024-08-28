@@ -121,8 +121,8 @@
 
 .card-color-item {
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
 }
 
@@ -136,4 +136,16 @@
 
 .color-blue {
     background-color: blue;
+}
+
+.color-green {
+    background-color: rgb(2, 151, 2);
+}
+
+.color-white {
+    background-color: rgb(243, 243, 247);
+}
+
+.color-black {
+    background-color: rgb(12, 12, 12);
 }

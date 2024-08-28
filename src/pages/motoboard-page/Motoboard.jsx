@@ -3,12 +3,14 @@ import './Motoboard.css';
 import {Helmet} from "react-helmet";
 import firstScreen from "../../assets/images/motoboard-first-screen.webp";
 import logo from "../../logo.png";
-import sibmaster3 from "../../assets/images/sibmaster3.png"
-import sibmasterPro from "../../assets/images/sibmasterPro.png"
+import sibmaster3 from "../../assets/images/sibmaster3.png";
+import sibmasterPro from "../../assets/images/sibmasterPro.png";
+import sibmasterDrive from "../../assets/images/sibmasterDrive.png";
 import FirstScreen from "../../components/first-screen/FirstScreen";
 import Card from "./Card";
-import simbaster3 from "./json/sibmaster3.json"
-import simbasterPro from "./json/sibmasterPro.json"
+import infoSibmaster3 from "./json/infoSibmaster3.json";
+import infoSibmasterPro from "./json/infoSibmasterPro.json";
+import infoSibmasterDrive from "./json/infoSibmasterDrive.json";
 
 
 const Motoboard = () => {
@@ -67,8 +69,9 @@ const Motoboard = () => {
                         <div className="catalog">
                             <h1 className="title-text">Каталог</h1>
                             <div className="catalog-cards">
-                                <Card title='SIBMASTER 3 (2024)' subtitle='Двигатель: 9 л.с.' boardImage={sibmaster3} technicalData={simbaster3} />
-                                <Card title='SIBMASTER PRO' subtitle='Двигатель: 8 л.с.' boardImage={sibmasterPro} technicalData={simbasterPro}/>
+                                <Card title='SIBMASTER 3 (2024)' subtitle='Двигатель: 9 л.с.' boardImage={sibmaster3} technicalData={infoSibmaster3} />
+                                <Card title='SIBMASTER PRO' subtitle='Двигатель: 8 л.с.' boardImage={sibmasterPro} technicalData={infoSibmasterPro}/>
+                                <Card title='SIBMASTER DRIVE' subtitle='Двигатель: 9 л.с.' boardImage={sibmasterDrive} technicalData={infoSibmasterDrive}/>
                             </div>
 
                         </div>
