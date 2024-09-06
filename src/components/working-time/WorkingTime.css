@@ -103,6 +103,35 @@
     }
 }
 
+@media screen and (max-width: 385px) {
+    .working_time_title {
+        font-size: 30px !important;
+    }
+
+    .home-page .working_time_title {
+        font-size: 24px !important;
+    }
+
+    .home-page .working_time_logo img {
+        width: 25%;
+    }
+
+    /* .working-time-top-wrapper {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .working-time-top:nth-child(2)::before, .working-time-top:nth-child(3)::before {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #fc8b06;
+        left: 0;
+        top: -20px;
+    } */
+}
+
+
 .working_time_text {
     border: 2px solid #fc8b06;
     border-radius: 10px;
