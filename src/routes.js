@@ -11,12 +11,6 @@ export const routes = [
     },
     {
         id: uuidv4(),
-        title: 'Мотоборды',
-        route: '/motoboard',
-        class: 'motoboard-link'
-    },
-    {
-        id: uuidv4(),
         class: '',
         img: logo
     },
@@ -55,5 +49,11 @@ export const routes = [
         title: 'Автомойка',
         route: '/carwash',
         class: ''
+    },
+    {
+        id: uuidv4(),
+        title: 'Мотоборды',
+        route: '/motoboard',
+        class: 'motoboard-link'
     },
 ] 
