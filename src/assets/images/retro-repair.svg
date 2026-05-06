@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <style>
+      .s{stroke:#F7931E;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;fill:none}
+    </style>
+  </defs>
+
+  <!-- Soviet-style retro car front -->
+  <path class="s" d="M10 72v10c0 6.6 5.4 12 12 12h84c6.6 0 12-5.4 12-12V72c0-9.4-7.6-17-17-17h-3.5l-8.8-13.6c-3.8-5.9-10.4-9.4-17.4-9.4H56.7c-7 0-13.6 3.5-17.4 9.4L30.5 55H27c-9.4 0-17 7.6-17 17Z"></path>
+
+  <!-- roof / windshield -->
+  <path class="s" d="M40 55l8-12.4c2.1-3.2 5.7-5.1 9.6-5.1h12.8c3.9 0 7.5 1.9 9.6 5.1L88 55"></path>
+  <path class="s" d="M53 42v13M64 40v15M75 42v13"></path>
+
+  <!-- upper trim line -->
+  <path class="s" d="M18 63h92"></path>
+
+  <!-- classic fender hints -->
+  <path class="s" d="M31 55l-8 7"></path>
+  <path class="s" d="M97 55l8 7"></path>
+
+  <!-- headlights -->
+  <circle class="s" cx="33" cy="74" r="8.5"></circle>
+  <circle class="s" cx="95" cy="74" r="8.5"></circle>
+
+  <!-- grille -->
+  <rect class="s" x="49" y="66" width="30" height="18" rx="3"></rect>
+  <path class="s" d="M54 70h20M54 75h20M54 80h20"></path>
+  <path class="s" d="M64 84v8"></path>
+
+  <!-- bumper -->
+  <path class="s" d="M24 93h80"></path>
+  <path class="s" d="M19 84h8"></path>
+  <path class="s" d="M101 84h8"></path>
+
+  <!-- lower body supports -->
+  <path class="s" d="M26 94v9c0 2.8 2.2 5 5 5h8c2.8 0 5-2.2 5-5v-9"></path>
+  <path class="s" d="M84 94v9c0 2.8 2.2 5 5 5h8c2.8 0 5-2.2 5-5v-9"></path>
+</svg>

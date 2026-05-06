@@ -10,12 +10,13 @@ import {
     electricCarIcon,
     engineIcon,
     quadIcon,
+    retroRepairIcon,
     headlightsIcon,
     suspensionCornerIcon,
     suspensionIcon,
     toningIcon,
     windshieldIcon,
-    engineRepair,
+    engineRepair1, engineRepair2, engineRepair3,
     saleEnginesIcon,
     suspentionCorner,
     engineForSale1,
@@ -25,6 +26,7 @@ import {
     headlightsPolish1, headlightsPolish2, headlightsPolish3, headlightsPolish4,
     toning, toning1, toning2, protect1, protect2, protect3,
     quadRepair1, quadRepair2, quadRepair3,
+    retroRepair1, retroRepair2,
 } from '../../assets'
 import styles from './Home.module.css'
 
@@ -34,6 +36,7 @@ const servicesData = [
     { id: 'tuning', title: 'Продажа новых ДВС', desc: 'Продажа и профессиональная замена новых двигателей с гарантией качества.', icon: saleEnginesIcon },
     { id: 'repair', title: 'Ремонт двигателя', desc: 'Капитальный и регламентный ремонт бензиновых и дизельных двигателей.', icon: engineIcon },
     { id: 'quadRepair', title: 'Ремонт квадроциклов', desc: 'Профессиональный ремонт, обслуживание и тюнинг утилитарной техники.', icon: quadIcon },
+    { id: 'retroRepair', title: 'Ремонт ретро техники', desc: 'Бережное техническое обслуживание и ремонт коллекционных авто и мото экспонатов.', icon: retroRepairIcon },
     { id: 'corner', title: 'Развал-схождение', desc: 'Точная настройка геометрии подвески на современном стенде.', icon: suspensionCornerIcon },
     { id: 'electric', title: 'Электрика', desc: 'Поиск и устранение неисправностей электронных систем.', icon: electricCarIcon },
     { id: 'service', title: 'Техническое обслуживание', desc: 'Плановые работы по подвеске и замена расходных материалов.', icon: suspensionIcon },
@@ -87,7 +90,11 @@ const servicesModalData = {
             'Ремонт, замена и обслуживание турбонагнетателей',
         ],
         note: 'Все работы выполняются с учётом рекомендаций и регламентов завода изготовителя, на современном оборудовании с использованием качественных расходных материалов.',
-        images: [{ src: engineRepair, alt: 'Ремонт двигателя' }],
+        images: [
+            { src: engineRepair1, alt: 'Ремонт двигателя: этап 1' },
+            { src: engineRepair2, alt: 'Ремонт двигателя: этап 2' },
+            { src: engineRepair3, alt: 'Ремонт двигателя: этап 3' },
+        ],
     },
     corner: {
         title: 'Развал-схождение',
@@ -217,6 +224,15 @@ const servicesModalData = {
             { src: quadRepair1, alt: 'Ремонт и обслуживание квадроцикла' },
             { src: quadRepair2, alt: 'Квадроцикл после сервисных работ' },
             { src: quadRepair3, alt: 'Профессиональный ремонт квадроциклов' },
+        ],
+    },
+    retroRepair: {
+        title: 'Ремонт ретро техники',
+        intro: 'ATV-Авто «Пулково» выполняет техническое обслуживание и ремонт ретро техники с бережным и профессиональным подходом к каждому коллекционному экземпляру.',
+        body: 'Работаем с классическими автомобилями и мотоциклами деликатно и внимательно к деталям: проводим диагностику, сервисные работы и восстановительный ремонт с учетом конструктивных особенностей техники своего времени. Подбираем решения, которые сохраняют оригинальный характер экспоната, повышают его надежность и помогают поддерживать коллекционную ценность в долгосрочной перспективе.',
+        images: [
+            { src: retroRepair1, alt: 'Салон ретро автомобиля после обслуживания' },
+            { src: retroRepair2, alt: 'Ремонт ретро автомобиля в сервисе' },
         ],
     },
 }

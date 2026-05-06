@@ -7,7 +7,10 @@ import tiresIcon from "./images/tires.svg";
 import tuningIcon from "./images/tuning.svg";
 import quadIcon from "./images/quadIcon.svg"
 import snowIcon from "./images/snowIcon.svg"
-import engineRepair from "./images/engine-repair.webp";
+import retroRepairIcon from "./images/retro-repair.svg"
+import engineRepair1 from "./images/engine-repair1.webp";
+import engineRepair2 from "./images/engine-repair2.webp";
+import engineRepair3 from "./images/engine-repair3.webp";
 import suspentionCorner from "./images/suspention-corner.webp";
 import electricCar from "./images/electric-car.webp";
 import suspentionRepair from "./images/suspention-repair.webp";
@@ -45,6 +48,10 @@ import engineForSale2 from "./images/engine-for-sale2.webp"
 import quadRepair1 from "./images/quad-repair1.webp"
 import quadRepair2 from "./images/quad-repair2.webp"
 import quadRepair3 from "./images/quad-repair3.webp"
+import retroRepair1 from "./images/retro-repair1.webp"
+import retroRepair2 from "./images/retro-repair2.webp"
+
+const engineRepair = engineRepair1;
 
 export {
     engineIcon,
@@ -56,7 +63,11 @@ export {
     tuningIcon,
     quadIcon,
     snowIcon,
+    retroRepairIcon,
     engineRepair,
+    engineRepair1,
+    engineRepair2,
+    engineRepair3,
     suspentionCorner,
     electricCar,
     suspentionRepair,
@@ -93,5 +104,7 @@ export {
     engineForSale2,
     quadRepair1,
     quadRepair2,
-    quadRepair3
+    quadRepair3,
+    retroRepair1,
+    retroRepair2
 }
