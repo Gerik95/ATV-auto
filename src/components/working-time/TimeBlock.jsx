@@ -9,7 +9,7 @@ const TimeBlock = ({ title, addClass, logo }) => {
             </div>
 
             <div className="working_time_logo">
-                <img src={logo} alt="Logo"/>
+                <img src={logo} alt="Logo" loading="lazy" />
             </div>
         </div>
     )

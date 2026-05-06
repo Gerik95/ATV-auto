@@ -1,112 +1,482 @@
-.contact_us {
-    padding: 50px 0;
+.motoboard-page {
+    background: #f5f5f5;
+    color: #1a1a1a;
 }
 
-.contact_grid {
-    border-radius: 20px;
-    padding: 40px;
-    background-color: #F2F6F7;
+.motoboard-container {
+    width: min(1200px, 100% - 32px);
+    margin: 0 auto;
+}
+
+.motoboard-hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    min-height: 100svh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.motoboard-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(4, 4, 4, 0.80) 0%, rgba(4, 4, 4, 0.59) 44%, rgba(4, 4, 4, 0.69) 100%),
+        linear-gradient(180deg, rgba(252, 139, 6, 0.12) 0%, rgba(252, 139, 6, 0) 42%);
+}
+
+.motoboard-hero-inner {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 56px 0 34px;
+    display: grid;
+    grid-template-columns: minmax(0, 560px) minmax(0, 1fr);
+    gap: 28px;
+    align-items: end;
+    box-sizing: border-box;
+}
+
+.motoboard-hero-content {
+    color: #fff;
+}
+
+.motoboard-hero-logo-wrap {
+    margin: -28px 0 18px;
+}
+
+@keyframes logoFloat {
+    0%   { transform: translateY(0px) rotate(-0.5deg); }
+    30%  { transform: translateY(-6px) rotate(0.4deg); }
+    60%  { transform: translateY(-3px) rotate(-0.3deg); }
+    100% { transform: translateY(0px) rotate(-0.5deg); }
+}
+
+.motoboard-hero-logo {
+    width: 160px;
+    display: block;
+    animation: logoFloat 5s ease-in-out infinite;
+    transform-origin: center bottom;
+    will-change: transform;
+}
+
+.motoboard-kicker {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 13px;
+    color: #fc8b06;
+}
+
+.motoboard-kicker-dark {
+    color: #ff9a27;
+}
+
+.motoboard-hero-content h1 {
+    margin: 10px 0 0;
+    font-size: clamp(34px, 5vw, 56px);
+    line-height: 1.03;
+    color: #fff;
+}
+
+.motoboard-hero-text {
+    margin: 16px 0 0;
+    max-width: 560px;
+    font-size: 17px;
+    line-height: 1.56;
+    color: #e6e6e6;
+}
+
+.motoboard-hero-actions {
+    margin-top: 24px;
     display: flex;
-    flex-direction: column;
-    gap: 50px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.motoboard-primary-btn,
+.motoboard-secondary-btn {
+    min-height: 48px;
+    padding: 0 22px;
+    border-radius: 999px;
+    display: inline-flex;
     align-items: center;
-    column-gap: 50px;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.2s ease;
+    cursor: pointer;
+    font-family: inherit;
 }
 
-.title-text {
-    color: #343a40!important;
-    text-align: center!important;
+.motoboard-primary-btn {
+    border: none;
+    background: #fc8b06;
+    color: #111;
 }
 
-.small-text {
-    font-size: 16px!important;
-    color: #343a40!important;
+.motoboard-primary-btn:hover {
+    background: #ff9a27;
 }
 
-.motoboard-block {
+.motoboard-secondary-btn {
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    background: transparent;
+    color: #fff;
+}
+
+.motoboard-secondary-btn:hover {
+    border-color: #fc8b06;
+    color: #fc8b06;
+}
+
+.motoboard-primary-btn:focus-visible,
+.motoboard-secondary-btn:focus-visible,
+.motoboard-card-button:focus-visible,
+.technical-card-close:focus-visible {
+    outline: 2px solid #fc8b06;
+    outline-offset: 3px;
+}
+
+.motoboard-hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.motoboard-stat-card {
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    background: rgba(8, 8, 8, 0.6);
+    padding: 18px 16px;
+    color: #fff;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(6px);
+}
+
+.motoboard-stat-card h2 {
+    margin: 0;
+    font-size: 19px;
+    line-height: 1.2;
+    color: #fc8b06;
+}
+
+.motoboard-stat-card p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #f2f2f2;
+}
+
+.motoboard-section {
+    padding: 58px 0;
+}
+
+.motoboard-section-light {
+    background: #f5f5f5;
+}
+
+.motoboard-section-dark {
+    background: #0b0b0b;
+}
+
+.motoboard-section-title {
+    margin: 8px 0 0;
+    text-align: center;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.1;
+}
+
+.motoboard-section-title-dark {
+    color: #fff;
+}
+
+.motoboard-section-description {
+    margin: 16px auto 0;
+    max-width: 780px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.65;
+    color: #474747;
+}
+
+.motoboard-intro-layout {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.95fr);
+    gap: 16px;
+    align-items: stretch;
+}
+
+.motoboard-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.motoboard-feature-card {
+    border: 1px solid #e5e5e5;
+    border-radius: 18px;
+    background: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
+    padding: 22px;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.05);
+}
+
+.motoboard-feature-card h3 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #1a1a1a;
+}
+
+.motoboard-feature-card p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #525252;
+}
+
+.motoboard-showcase-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(252, 139, 6, 0.2);
+    border-radius: 22px;
+    background:
+        radial-gradient(circle at top, rgba(252, 139, 6, 0.14), transparent 56%),
+        linear-gradient(180deg, #111111 0%, #0a0a0a 100%);
+    padding: 28px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
+    display: grid;
+    gap: 20px;
+    min-height: 100%;
+}
+
+.motoboard-showcase-card::after {
+    content: "";
+    position: absolute;
+    inset: auto -10% -30% auto;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: rgba(252, 139, 6, 0.08);
+    filter: blur(20px);
+    pointer-events: none;
+}
+
+.motoboard-showcase-copy {
+    position: relative;
+    z-index: 1;
+}
+
+.motoboard-showcase-kicker {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #ff9a27;
+}
+
+.motoboard-showcase-copy h3 {
+    margin: 10px 0 0;
+    font-size: 28px;
+    line-height: 1.15;
+    color: #fff;
+}
+
+.motoboard-showcase-copy p {
+    margin: 12px 0 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #dfdfdf;
+}
+
+.motoboard-showcase-image-wrap {
+    position: relative;
+    z-index: 1;
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+    padding: 18px;
+    min-height: 250px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 350px;
-    padding: 40px;
+    justify-content: center;
 }
 
-.responsive-video {
-    width: 100%;
+.motoboard-showcase-image {
+    width: min(100%, 320px);
     height: auto;
-    max-height: 100%;
+    object-fit: contain;
 }
 
-.catalog {
-
+.motoboard-media-layout {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
+    gap: 16px;
+    align-items: stretch;
 }
 
-.catalog-cards {
-    margin-top: 50px;
-    display: flex;
-    justify-content: flex-start;
-    gap: 50px;
+.motoboard-video-shell {
+    border: 1px solid rgba(252, 139, 6, 0.24);
+    border-radius: 24px;
+    padding: 12px;
+    background: linear-gradient(180deg, #141414 0%, #0f0f0f 100%);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
 }
 
+.motoboard-video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    border-radius: 18px;
+    object-fit: cover;
+    background: #000;
+}
 
+.motoboard-reasons-grid {
+    display: grid;
+    gap: 14px;
+}
 
-@media screen and (max-width: 820px) {
-    .contact_us {
-        padding: 20px 0;
+.motoboard-reason-card {
+    border: 1px solid rgba(252, 139, 6, 0.24);
+    border-radius: 18px;
+    background: linear-gradient(180deg, #141414 0%, #0f0f0f 100%);
+    padding: 22px;
+    color: #fff;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+}
+
+.motoboard-reason-card h3 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #fc8b06;
+}
+
+.motoboard-reason-card p {
+    margin: 12px 0 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #dfdfdf;
+}
+
+.motoboard-catalog-grid {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
+}
+
+@media screen and (max-width: 1024px) {
+    .motoboard-hero-inner,
+    .motoboard-intro-layout,
+    .motoboard-media-layout {
+        grid-template-columns: 1fr;
     }
 
-    .contact_grid {
-        flex-direction: column;
-        row-gap: 20px;
-    }
-
-    .motoboard-block {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0px;
-        gap: 0px;
-    }
-
-    .motoboard-block img {
-        display: none;
-    }
-
-    .catalog-cards {
-        margin-top: 20px;
-        display: flex;
-        justify-content: flex-start;
-        gap: 50px;
+    .motoboard-hero-stats,
+    .motoboard-features-grid,
+    .motoboard-catalog-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
-@media screen and (max-width: 500px) {
-    .contact_us {
-        padding: 20px 0;
+/* Extra-narrow safety net (Z Fold cover, narrow phones) */
+@media screen and (max-width: 380px) {
+    .motoboard-hero-stats,
+    .motoboard-features-grid,
+    .motoboard-catalog-grid {
+        grid-template-columns: 1fr;
     }
 
-    .contact_grid {
+    .motoboard-hero-actions {
         flex-direction: column;
-        row-gap: 20px;
     }
 
-    .motoboard-block {
-        display: flex;
+    .motoboard-primary-btn,
+    .motoboard-secondary-btn {
+        width: 100%;
+    }
+
+    .motoboard-hero-content h1 {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .motoboard-container {
+        width: min(1200px, 100% - 20px);
+    }
+
+    .motoboard-hero-inner {
+        min-height: 100vh;
+        min-height: 100svh;
+        padding: 40px 0 24px;
+        gap: 18px;
+    }
+
+    .motoboard-hero-logo-wrap {
+        margin: -16px 0 14px;
+    }
+
+    .motoboard-hero-logo {
+        width: 124px;
+    }
+
+    .motoboard-hero-content h1 {
+        font-size: 32px;
+    }
+
+    .motoboard-hero-text,
+    .motoboard-section-description {
+        font-size: 15px;
+    }
+
+    .motoboard-hero-actions,
+    .motoboard-hero-stats,
+    .motoboard-features-grid,
+    .motoboard-catalog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .motoboard-hero-actions {
         flex-direction: column;
-        align-items: center;
-        padding: 0px;
-        gap: 0px;
     }
 
-    .motoboard-block img {
-        display: none;
+    .motoboard-primary-btn,
+    .motoboard-secondary-btn {
+        width: 100%;
     }
 
-    .catalog-cards {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: 50px;
+    .motoboard-section {
+        padding: 44px 0;
+    }
+
+    .motoboard-stat-card,
+    .motoboard-feature-card,
+    .motoboard-reason-card,
+    .motoboard-showcase-card {
+        padding: 18px;
+    }
+
+    .motoboard-showcase-copy h3 {
+        font-size: 24px;
+    }
+
+    .motoboard-video-shell {
+        padding: 8px;
+        border-radius: 18px;
+    }
+
+    .motoboard-video {
+        min-height: 280px;
+        border-radius: 14px;
     }
 }

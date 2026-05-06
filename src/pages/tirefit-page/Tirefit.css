@@ -1,0 +1,570 @@
+.tirefit-page {
+    background: #f5f5f5;
+    color: #1a1a1a;
+}
+
+.tirefit-container {
+    width: min(1200px, 100% - 32px);
+    margin: 0 auto;
+}
+
+.tirefit-hero {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tirefit-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(4, 4, 4, 0.80) 0%, rgba(4, 4, 4, 0.59) 45%, rgba(4, 4, 4, 0.69) 100%),
+        linear-gradient(180deg, rgba(252, 139, 6, 0.12) 0%, rgba(252, 139, 6, 0) 42%);
+}
+
+.tirefit-hero-inner {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 56px 0 34px;
+    display: grid;
+    grid-template-columns: minmax(0, 560px) minmax(0, 1fr);
+    gap: 28px;
+    align-items: end;
+    box-sizing: border-box;
+}
+
+.tirefit-hero-content {
+    color: #fff;
+}
+
+.tirefit-hero-logo-wrap {
+    display: block;
+    margin: -28px 0 18px;
+}
+
+@keyframes logoFloat {
+    0%   { transform: translateY(0px) rotate(-0.5deg); }
+    30%  { transform: translateY(-6px) rotate(0.4deg); }
+    60%  { transform: translateY(-3px) rotate(-0.3deg); }
+    100% { transform: translateY(0px) rotate(-0.5deg); }
+}
+
+.tirefit-hero-logo {
+    width: 140px;
+    display: block;
+    animation: logoFloat 5s ease-in-out infinite;
+    transform-origin: center bottom;
+    will-change: transform;
+}
+
+.tirefit-kicker {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 13px;
+    color: #fc8b06;
+}
+
+.tirefit-kicker-dark {
+    color: #ff9a27;
+}
+
+.tirefit-hero-content h1 {
+    margin: 10px 0 0;
+    font-size: clamp(34px, 5vw, 56px);
+    line-height: 1.03;
+    color: #fff;
+}
+
+.tirefit-hero-text {
+    margin: 16px 0 0;
+    max-width: 560px;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #e6e6e6;
+}
+
+.tirefit-hero-actions {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tirefit-primary-btn,
+.tirefit-secondary-btn {
+    min-height: 48px;
+    padding: 0 22px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.2s ease;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.tirefit-primary-btn {
+    border: none;
+    background: #fc8b06;
+    color: #111;
+}
+
+.tirefit-primary-btn:hover {
+    background: #ff9a27;
+}
+
+.tirefit-secondary-btn {
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    background: transparent;
+    color: #fff;
+}
+
+.tirefit-secondary-btn:hover {
+    border-color: #fc8b06;
+    color: #fc8b06;
+}
+
+.tirefit-primary-btn:focus-visible,
+.tirefit-secondary-btn:focus-visible,
+.tirefit-scroll-link:focus-visible,
+.tirefit-contact-phone:focus-visible {
+    outline: 2px solid #fc8b06;
+    outline-offset: 3px;
+}
+
+.tirefit-scroll-link {
+    margin-top: 18px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #ffb04f;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.tirefit-hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.tirefit-stat-card {
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    background: rgba(8, 8, 8, 0.6);
+    padding: 18px 16px;
+    color: #fff;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(6px);
+}
+
+.tirefit-stat-card h2 {
+    margin: 0;
+    font-size: 19px;
+    line-height: 1.2;
+    color: #fc8b06;
+}
+
+.tirefit-stat-card p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    line-height: 1.45;
+    color: #f2f2f2;
+}
+
+.tirefit-section {
+    padding: 58px 0;
+}
+
+.tirefit-section-light {
+    background: #f5f5f5;
+}
+
+.tirefit-section-dark {
+    background: #0b0b0b;
+}
+
+.tirefit-map-section {
+    padding-top: 0;
+}
+
+.tirefit-section-title {
+    margin: 8px 0 0;
+    text-align: center;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.1;
+}
+
+.tirefit-section-title-dark {
+    color: #fff;
+}
+
+.tirefit-card-kicker {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 12px;
+    color: #fc8b06;
+}
+
+.tirefit-info-text {
+    margin: 14px 0 0;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #494949;
+}
+
+.tirefit-accent {
+    color: #fc8b06;
+}
+
+.tirefit-services-grid {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.2fr);
+    gap: 16px;
+    align-items: stretch;
+}
+
+.tirefit-services-intro,
+.tirefit-info-card,
+.tirefit-contact-card {
+    border: 1px solid #e5e5e5;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
+    padding: 24px;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.05);
+}
+
+.tirefit-services-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tirefit-services-intro h3,
+.tirefit-contact-card h3,
+.tirefit-info-card h3 {
+    margin: 10px 0 0;
+    font-size: 28px;
+    line-height: 1.15;
+    color: #1a1a1a;
+}
+
+.tirefit-service-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.tirefit-service-card {
+    position: relative;
+    padding: 22px 18px 22px 52px;
+    border: 1px solid rgba(252, 139, 6, 0.16);
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+}
+
+.tirefit-service-card::before {
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: 18px;
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    background: #fc8b06;
+    box-shadow: 0 0 0 7px rgba(252, 139, 6, 0.12);
+}
+
+.tirefit-service-card h3 {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.4;
+    color: #1e1e1e;
+}
+
+.tirefit-benefits-grid {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.tirefit-benefit-card {
+    border: 1px solid rgba(252, 139, 6, 0.24);
+    border-radius: 18px;
+    background: linear-gradient(180deg, #141414 0%, #0f0f0f 100%);
+    padding: 22px;
+    color: #fff;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.tirefit-benefit-card h3 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #fc8b06;
+}
+
+.tirefit-benefit-card p {
+    margin: 12px 0 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #dfdfdf;
+}
+
+.tirefit-visit-grid {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.82fr);
+    gap: 16px;
+    align-items: start;
+}
+
+.tirefit-visit-stack {
+    display: grid;
+    gap: 16px;
+}
+
+.tirefit-info-card p {
+    margin: 12px 0 0;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #494949;
+}
+
+.tirefit-contact-phone {
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 0 18px;
+    border-radius: 999px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(252, 139, 6, 0.26);
+    background: #fff;
+    text-decoration: none;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    transform: translateY(0);
+    transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, background-color 0.24s ease;
+}
+
+.tirefit-contact-phone::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg, transparent 20%, rgba(252, 139, 6, 0.18) 50%, transparent 80%);
+    transform: translateX(-135%);
+    transition: transform 0.42s ease;
+    pointer-events: none;
+}
+
+.tirefit-contact-phone:hover {
+    transform: translateY(-2px);
+    border-color: rgba(252, 139, 6, 0.9);
+    background: #fffaf4;
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(252, 139, 6, 0.12);
+}
+
+.tirefit-contact-phone:hover::after {
+    transform: translateX(135%);
+}
+
+.tirefit-contact-phone img,
+.tirefit-contact-phone span {
+    position: relative;
+    z-index: 1;
+}
+
+.tirefit-contact-phone img {
+    width: 18px;
+    height: 18px;
+}
+
+.tirefit-contact-phone span {
+    color: #111;
+    font-weight: 700;
+    transition: color 0.24s ease;
+}
+
+.tirefit-contact-phone:hover span {
+    color: #fc8b06;
+}
+
+.tirefit-mini-facts {
+    margin-top: 22px;
+    display: grid;
+    gap: 12px;
+}
+
+.tirefit-mini-fact {
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid rgba(252, 139, 6, 0.16);
+    padding: 14px 16px;
+    display: grid;
+    gap: 4px;
+}
+
+.tirefit-mini-fact strong {
+    color: #1a1a1a;
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+.tirefit-mini-fact span {
+    color: #636363;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.tirefit-map-description {
+    margin: 16px auto 0;
+    max-width: 760px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.65;
+    color: #474747;
+}
+
+.tirefit-map-shell {
+    margin-top: 28px;
+    border: 1px solid #e5e5e5;
+    border-radius: 24px;
+    padding: 12px;
+    background: linear-gradient(180deg, #ffffff 0%, #f7f7f7 100%);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.07);
+}
+
+.tirefit-map-frame {
+    display: block;
+    width: 100%;
+    height: 500px;
+    border: 0;
+    border-radius: 18px;
+}
+
+@media screen and (max-width: 1024px) {
+    .tirefit-hero-inner,
+    .tirefit-services-grid,
+    .tirefit-visit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tirefit-benefits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .tirefit-container {
+        width: min(1200px, 100% - 20px);
+    }
+
+    .tirefit-hero-inner {
+        min-height: 100vh;
+        min-height: 100svh;
+        padding: 40px 0 24px;
+        gap: 18px;
+    }
+
+    .tirefit-hero-logo-wrap {
+        margin: -16px 0 14px;
+    }
+
+    .tirefit-hero-logo {
+        width: 112px;
+    }
+
+    .tirefit-hero-content h1 {
+        font-size: 32px;
+    }
+
+    .tirefit-hero-text,
+    .tirefit-map-description,
+    .tirefit-info-text,
+    .tirefit-info-card p {
+        font-size: 15px;
+    }
+
+    .tirefit-section {
+        padding: 44px 0;
+    }
+
+    .tirefit-map-section {
+        padding-top: 0;
+    }
+
+    .tirefit-hero-actions,
+    .tirefit-hero-stats,
+    .tirefit-service-list,
+    .tirefit-benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tirefit-hero-actions {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tirefit-primary-btn,
+    .tirefit-secondary-btn,
+    .tirefit-contact-phone {
+        width: 100%;
+    }
+
+    .tirefit-stat-card,
+    .tirefit-services-intro,
+    .tirefit-service-card,
+    .tirefit-benefit-card,
+    .tirefit-info-card,
+    .tirefit-contact-card {
+        padding: 18px;
+    }
+
+    .tirefit-services-intro h3,
+    .tirefit-contact-card h3,
+    .tirefit-info-card h3 {
+        font-size: 24px;
+    }
+
+    .tirefit-service-card {
+        padding: 18px 16px 18px 46px;
+    }
+
+    .tirefit-service-card::before {
+        top: 24px;
+        left: 16px;
+    }
+
+    .tirefit-contact-phone {
+        justify-content: center;
+        padding: 0 14px;
+    }
+
+    .tirefit-map-shell {
+        padding: 8px;
+        border-radius: 18px;
+    }
+
+    .tirefit-map-frame {
+        height: 380px;
+        border-radius: 14px;
+    }
+}

@@ -2,26 +2,94 @@
     position: fixed;
     bottom: 50px;
     cursor: pointer;
-    transition: all .35s ease;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0;
+    transform: translate3d(20px, 10px, 0) scale(0.8);
+    pointer-events: none;
+    transition: right 340ms cubic-bezier(0.22, 1, 0.36, 1), opacity 300ms ease, transform 380ms cubic-bezier(0.22, 1, 0.36, 1), border-color 240ms ease, background-color 240ms ease, box-shadow 240ms ease;
     z-index: 9999;
+}
+
+@keyframes callSqueezeIn {
+    0% {
+        transform: translate3d(20px, 10px, 0) scale(1, 0.38);
+    }
+    55% {
+        transform: translate3d(0, 0, 0) scale(0.88, 1.1);
+    }
+    78% {
+        transform: translate3d(0, 0, 0) scale(1.05, 0.95);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) scale(1, 1);
+    }
 }
 
 .button_top.hide {
     right: -50px;
+    opacity: 0;
+    transform: translate3d(20px, 10px, 0) scale(0.8);
+    pointer-events: none;
 }
 
 .button_top.show {
     right: 50px;
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1, 1);
+    pointer-events: auto;
+    animation: callSqueezeIn 460ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.button_top:hover {
-    opacity: .6;
+.button_top.light-surface {
+    border-color: rgba(14, 14, 14, 0.9);
+    background: rgba(14, 14, 14, 0.92);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.04) inset;
 }
 
 .button_top img {
-    width: 50px;
+    width: 22px;
+    height: 22px;
+    filter: brightness(0) invert(1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .button_top:hover {
+        transform: translate3d(0, 0, 0) scale(1.02);
+        border-color: rgba(255, 255, 255, 0.82);
+        background: rgba(255, 255, 255, 0.16);
+        box-shadow: 0 16px 30px rgba(0, 0, 0, 0.32), 0 0 0 1px rgba(255, 255, 255, 0.12) inset;
+    }
+
+    .button_top.light-surface:hover {
+        border-color: rgba(10, 10, 10, 1);
+        background: rgba(8, 8, 8, 0.98);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.42), 0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+    }
 }
 
 .mobile.button_top.show {
     right: 20px;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) and (orientation: landscape) {
+    .button_top.show {
+        right: 20px;
+    }
+}
+
+body.modal-open .button_top,
+body.modal-open .mobile.button_top {
+    right: -50px;
+    pointer-events: none;
 }

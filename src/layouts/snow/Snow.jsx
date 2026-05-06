@@ -19,7 +19,7 @@ const Snow = () => {
                         Антигравийное пленочное покрытие сохранит исходную глубину цвета краски.
                     </p>
                     <div className="contact_phone">
-                        <img src={call} alt="call" />
+                        <img src={call} alt="call"  loading="lazy" />
                         <a href="tel:3307115">Нажмите чтобы позвонить нам</a>
                     </div>
                 </div>

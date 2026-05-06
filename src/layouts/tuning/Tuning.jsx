@@ -22,14 +22,14 @@ const Tuning = () => {
                 </div>
                 <p className='item-right-h'>
                     <div className="contact_phone">
-                        <img src={call} alt="call"/>
+                        <img src={call} alt="call" loading="lazy" />
                         <a href="tel:+79119566857">+7 (911) 956-68-57</a>
                     </div>
                     <br />
                     Все работы выполняются с использованием современного оборудования и качественных расходных материалов.</p>
             </div>
             <div className="section-item-left">
-                <img className="section-item-image" src={tuning} alt="Tuning" />
+                <img className="section-item-image" src={tuning} alt="Tuning"  loading="lazy" />
             </div>
         </div>
     );

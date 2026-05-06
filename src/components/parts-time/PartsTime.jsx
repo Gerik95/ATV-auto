@@ -18,7 +18,7 @@ const PartsTime = ({title}) => {
             </div>
 
             <div className="parts_time_logo">
-                <img src={logo} alt="Logo" />
+                <img src={logo} alt="Logo"  loading="lazy" />
             </div>
 
             <div className="parts_time_text">

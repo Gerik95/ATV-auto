@@ -21,7 +21,7 @@ function Item({item})
 {
     return (
         <Paper className='carousel'>
-            <img className="section-item-image" src={item.src} alt={item.alt}/>
+            <img className="section-item-image" src={item.src} alt={item.alt} loading="lazy" />
         </Paper>
     )
 }

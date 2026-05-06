@@ -3,14 +3,63 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/logo.ico" />
+  <script>
+    (function () {
+      var search = window.location.search;
+      if (!search || search.indexOf("spa-route=") === -1) return;
+
+      var routeData = search.replace(/^\?/, "");
+      var parts = routeData.split("&");
+      var encodedPath = "";
+      var encodedQuery = "";
+
+      for (var i = 0; i < parts.length; i += 1) {
+        var tuple = parts[i].split("=");
+        if (tuple[0] === "spa-route") encodedPath = tuple[1] || "";
+        if (tuple[0] === "spa-query") encodedQuery = tuple[1] || "";
+      }
+
+      if (!encodedPath) return;
+
+      var restoredPath = decodeURIComponent(encodedPath);
+      var restoredQuery = encodedQuery ? decodeURIComponent(encodedQuery) : "";
+      var targetUrl = restoredPath + (restoredQuery ? "?" + restoredQuery : "") + window.location.hash;
+      window.history.replaceState(null, "", targetUrl);
+    })();
+  </script>
+  <link rel="icon" type="image/x-icon" href="%PUBLIC_URL%/logo.ico" />
+  <link rel="shortcut icon" href="%PUBLIC_URL%/logo.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using create-react-app" />
+  <meta name="theme-color" content="#111111" />
+  <meta
+    name="description"
+    content="ATV-Auto Пулково: автосервис, магазин автозапчастей, шиномонтаж, автомойка и обслуживание транспорта в Санкт-Петербурге."
+  />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ATV-Auto Пулково" />
+  <meta property="og:title" content="ATV-Auto Пулково" />
+  <meta
+    property="og:description"
+    content="Автосервис, магазин автозапчастей, шиномонтаж, автомойка и обслуживание транспорта в Санкт-Петербурге."
+  />
+  <meta property="og:url" content="https://atv-auto.ru/" />
+  <meta property="og:image" content="https://atv-auto.ru/logo512.png" />
+  <meta property="og:image:alt" content="Логотип ATV-Auto Пулково" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="ATV-Auto Пулково" />
+  <meta
+    name="twitter:description"
+    content="Автосервис, магазин автозапчастей, шиномонтаж, автомойка и обслуживание транспорта в Санкт-Петербурге."
+  />
+  <meta name="twitter:image" content="https://atv-auto.ru/logo512.png" />
+  <link rel="canonical" href="https://atv-auto.ru/" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="preload" as="image" href="%PUBLIC_URL%/first-screen.webp" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap"
@@ -31,7 +80,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-  <title>ATV-Auto</title>
+  <title>ATV-Auto Пулково</title>
 </head>
 
 <body>

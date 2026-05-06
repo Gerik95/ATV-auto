@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <style>
+      .s{stroke:#F7931E;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;fill:none}
+    </style>
+  </defs>
+
+  <!-- top intake -->
+  <rect class="s" x="40" y="12" width="48" height="11" rx="3.5"/>
+  <path class="s" d="M47 23v9c0 2.8 2.2 5 5 5h24c2.8 0 5-2.2 5-5v-9"/>
+  <path class="s" d="M53 23v9M59 23v9M65 23v9M71 23v9M77 23v9"/>
+  <path class="s" d="M53 37h22"/>
+
+  <!-- upper engine body -->
+  <path class="s" d="M42 42c4-5 10-8 17-8h10c7 0 13 3 17 8l6 7-8 7c-2-1.5-4.4-2.3-7-2.3H51c-2.6 0-5 .8-7 2.3l-8-7 6-7Z"/>
+
+  <!-- valve covers -->
+  <g transform="rotate(-45 34 46)">
+    <rect class="s" x="16" y="38" width="26" height="20" rx="3.8"/>
+    <path class="s" d="M22 43l0 10M27 43l0 10M32 43l0 10M37 43l0 10"/>
+    <path class="s" d="M40 40l5 0"/>
+  </g>
+  <g transform="rotate(45 94 46)">
+    <rect class="s" x="86" y="38" width="26" height="20" rx="3.8"/>
+    <path class="s" d="M92 43l0 10M97 43l0 10M102 43l0 10M107 43l0 10"/>
+    <path class="s" d="M83 40l5 0"/>
+  </g>
+
+  <!-- side lower blocks -->
+  <path class="s" d="M31 56l-5 5v9c0 3.3 2.7 6 6 6h5"/>
+  <path class="s" d="M97 56l5 5v9c0 3.3-2.7 6-6 6h-5"/>
+
+  <!-- front plate -->
+  <path class="s" d="M52 54h24l5 5-9 19H56l-9-19 5-5Z"/>
+  <circle class="s" cx="51" cy="61" r="1.7"/>
+  <circle class="s" cx="77" cy="61" r="1.7"/>
+
+  <!-- lower front block -->
+  <path class="s" d="M45 78h38v19c0 2.2-1.8 4-4 4H49c-2.2 0-4-1.8-4-4V78Z"/>
+  <circle class="s" cx="41" cy="91" r="2.2"/>
+  <circle class="s" cx="87" cy="91" r="2.2"/>
+
+  <!-- crank pulley -->
+  <circle class="s" cx="64" cy="84" r="11.5"/>
+  <circle class="s" cx="64" cy="84" r="4.2"/>
+
+  <!-- oil pan / base -->
+  <path class="s" d="M47 101v9c0 3.3 2.7 6 6 6h22c3.3 0 6-2.7 6-6v-9"/>
+</svg>

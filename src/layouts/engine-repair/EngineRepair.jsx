@@ -28,12 +28,12 @@ const EngineRepair = () => {
                     расходных материалов.
                 </p>
                 <div className="contact_phone">
-                    <img src={call} alt="call"/>
+                    <img src={call} alt="call" loading="lazy" />
                     <a href="tel:3307115">Нажмите чтобы позвонить нам</a>
                 </div>
             </div>
             <div className="section-item-right">
-                <img className="section-item-image" src={engineRepair} alt="Engine Repair"/>
+                <img className="section-item-image" src={engineRepair} alt="Engine Repair" loading="lazy" />
             </div>
         </div>
     );

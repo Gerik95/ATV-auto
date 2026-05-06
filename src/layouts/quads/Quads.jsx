@@ -25,7 +25,7 @@ const Quads = () => {
                         долговечность полученного результата.
                     </p>
                     <div className="contact_phone alternative">
-                        <img src={call} alt="call"/>
+                        <img src={call} alt="call" loading="lazy" />
                         <a href="tel:3307115">Нажмите чтобы позвонить нам</a>
                     </div>
                 </div>

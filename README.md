@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# ATV-Auto Pulkovo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Corporate website for **ATV-Auto Pulkovo** — an auto service center in Saint Petersburg. Covers all business verticals: car repair, spare parts search, tire fitting, car wash, motorsport boards, and partnership inquiries.
 
-## Available Scripts
+## Stack
 
-In the project directory, you can run:
+- **React 18** · React Router DOM v6
+- **CSS Modules** (home page) · Plain CSS (all other pages)
+- **MUI v5** · Elastic EUI · Emotion
+- **EmailJS** · Yup · React Helmet
+- **Create React App** (react-scripts 5)
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+src/
+├── assets/            # Images, SVG icons, barrel export
+├── components/        # Shared components (Nav, Footer, CursorGlow, ScrollReveal, SEO, Carousel…)
+├── data/              # Static data files (carousels, contacts)
+├── layouts/           # Reusable section blocks for service pages
+├── pages/             # Route-level page components
+│   ├── home-page/
+│   ├── about-page/
+│   ├── contacts/
+│   ├── cooperation/
+│   ├── shop-page/
+│   ├── motoboard-page/
+│   ├── carwash-page/
+│   ├── tirefit-page/
+│   └── service-page/
+├── UI/                # Utility UI elements (scroll-to-top button)
+├── routes.js          # Navigation link config
+└── App.jsx            # Root component & routing
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Pages
 
-### `npm test`
+| Route | Page |
+|---|---|
+| `/` | Home |
+| `/about` | About |
+| `/contacts` | Contacts |
+| `/cooperation` | Partnership |
+| `/shop` | VIN Parts Search |
+| `/motoboard` | Motorsport Boards |
+| `/carwash` | Car Wash |
+| `/tirefit` | Tire Fitting |
+| `/prolamp` | Headlight Polishing |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+```bash
+npm install
+npm start      # http://localhost:3000
+npm run build
+npm test
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Notable Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Per-page SEO — unique title, description, canonical, Open Graph, Twitter Card
+- Yandex reviews loaded from `/public/yandex-reviews.json` with static fallback
+- EmailJS contact form — no backend required
+- Scroll-triggered reveal animations and hero logo floating animation
+- Fully responsive via CSS Media Queries

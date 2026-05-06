@@ -22,21 +22,21 @@ const SuspentionCorner = () => {
                     </ul>
                 </div>
                 <p className="item-right-h">
-                    Стоимость диагностики развал-схождение: <span className="span-item-right">1050 рублей</span> <br/>
+                    Стоимость диагностики развал-схождение: <span className="span-item-right">1800 рублей</span> <br/>
                     Развал-схождение легкового автомобиля(1 ось): <span
-                    className="span-item-right">1950 рублей</span><br/>
-                    Развал-схождение легкового автомобиля(2 оси): <span
-                    className="span-item-right">2550 рублей</span><br/>
+                    className="span-item-right">2500 рублей</span><br/>
+                    Развал-схождение кроссовера(1 ось): <span
+                    className="span-item-right">2800 рублей</span><br/>
                     Все работы выполняются с использованием современного
                     оборудования.
                 </p>
                 <div className="contact_phone">
-                    <img src={call} alt="call"/>
+                    <img src={call} alt="call" loading="lazy" />
                     <a href="tel:3307115">Нажмите чтобы позвонить нам</a>
                 </div>
             </div>
             <div className="section-item-left">
-                <img className="section-item-image" src={suspentionCorner} alt="Suspention Corner"/>
+                <img className="section-item-image" src={suspentionCorner} alt="Suspention Corner" loading="lazy" />
             </div>
         </div>
     );

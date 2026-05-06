@@ -1,17 +1,26 @@
-import {headlights1, headlightsAfter, headlightsBefore} from '../assets';
+import {
+    headlightsPolish1,
+    headlightsPolish2,
+    headlightsPolish3,
+    headlightsPolish4
+} from '../assets';
 
 
 export const headlightsCarouselData = [
     {
-        src: headlightsBefore,
-        alt: 'Headlights Before'
+        src: headlightsPolish1,
+        alt: 'Полировка фар: до'
     },
     {
-        src: headlightsAfter,
-        alt: 'Headlights After'
+        src: headlightsPolish2,
+        alt: 'Полировка фар: после'
     },
     {
-        src: headlights1,
-        alt: 'Headlights After'
+        src: headlightsPolish3,
+        alt: 'Полировка фар: результат 1'
+    },
+    {
+        src: headlightsPolish4,
+        alt: 'Полировка фар: результат 2'
     },
 ]

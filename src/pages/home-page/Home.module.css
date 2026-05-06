@@ -1,0 +1,1041 @@
+.page {
+    background: #f5f5f5;
+    color: #1a1a1a;
+}
+
+.container {
+    width: min(1200px, 100% - 32px);
+    margin: 0 auto;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    min-height: 100svh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.heroOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(3, 3, 3, 0.77) 0%, rgba(3, 3, 3, 0.53) 46%, rgba(3, 3, 3, 0.55) 100%);
+}
+
+.heroInner {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 70px 0 28px;
+    display: grid;
+    gap: 20px;
+    align-items: end;
+    box-sizing: border-box;
+}
+
+.heroInfo {
+    width: min(560px, 100%);
+    color: #fff;
+}
+
+@keyframes logoFloat {
+    0%   { transform: translateY(0px) rotate(-0.5deg); }
+    30%  { transform: translateY(-6px) rotate(0.4deg); }
+    60%  { transform: translateY(-3px) rotate(-0.3deg); }
+    100% { transform: translateY(0px) rotate(-0.5deg); }
+}
+
+.heroLogo {
+    width: 140px;
+    margin-bottom: 18px;
+    animation: logoFloat 5s ease-in-out infinite;
+    transform-origin: center bottom;
+    will-change: transform;
+}
+
+.heroInfo h1 {
+    margin: 0;
+    font-size: clamp(32px, 5vw, 56px);
+    line-height: 1.05;
+}
+
+.heroInfo p {
+    margin: 12px 0 0;
+    font-size: 17px;
+    color: #e7e7e7;
+    line-height: 1.4;
+}
+
+.heroButtons {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.primaryBtn,
+.secondaryBtn {
+    border: none;
+    border-radius: 999px;
+    min-height: 46px;
+    padding: 0 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.2s ease;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.primaryBtn {
+    color: #101010;
+    background: #fc8b06;
+}
+
+.primaryBtn:hover {
+    background: #ff9a27;
+}
+
+.secondaryBtn {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.secondaryBtn:hover {
+    border-color: #fc8b06;
+    color: #fc8b06;
+}
+
+.heroInlineCards {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.heroInlineCard {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(252, 139, 6, 0.45);
+    background: rgba(11, 11, 11, 0.8);
+    border-radius: 14px;
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transform: translateY(0);
+    box-shadow: 0 0 0 rgba(252, 139, 6, 0);
+    transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, background-color 0.24s ease;
+}
+
+.heroInlineCard::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg, transparent 16%, rgba(252, 139, 6, 0.22) 50%, transparent 84%);
+    transform: translateX(-135%);
+    transition: transform 0.42s ease;
+    pointer-events: none;
+}
+
+.heroInlineCard:hover {
+    transform: translateY(-2px);
+    border-color: rgba(252, 139, 6, 0.85);
+    background: rgba(18, 18, 18, 0.92);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.34), 0 0 0 1px rgba(252, 139, 6, 0.18);
+}
+
+.heroInlineCard:hover::after {
+    transform: translateX(135%);
+}
+
+.heroInlineCard:focus-visible {
+    outline: 2px solid #fc8b06;
+    outline-offset: 2px;
+}
+
+.heroInlineCard img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+.heroInlineCard span {
+    font-size: 12px;
+    font-weight: 700;
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.heroInlineCardNew {
+    padding-right: 20px;
+}
+
+.heroInlineRibbon {
+    position: absolute;
+    top: 8px;
+    right: -18px;
+    transform: rotate(35deg);
+    background: #fc8b06;
+    color: #101010;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    padding: 2px 22px;
+    text-transform: uppercase;
+    pointer-events: none;
+    box-shadow: 0 4px 10px rgba(252, 139, 6, 0.35);
+}
+
+.heroStats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.statCard {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    background: rgba(8, 8, 8, 0.6);
+    padding: 16px 14px;
+    color: #fff;
+}
+
+.statCard h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #fc8b06;
+}
+
+.statCard p {
+    margin: 8px 0 0;
+    font-size: 13px;
+    color: #f3f3f3;
+    line-height: 1.35;
+}
+
+.sectionLight {
+    padding: 58px 0;
+    background: #f5f5f5;
+}
+
+.sectionDark {
+    padding: 58px 0;
+    background: #0b0b0b;
+}
+
+.kicker {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    color: #fc8b06;
+    text-align: center;
+}
+
+.kickerDark {
+    color: #ff9a27;
+}
+
+.sectionTitle {
+    margin: 8px 0 0;
+    text-align: center;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.1;
+}
+
+.sectionTitleDark {
+    color: #fff;
+}
+
+.servicesGrid {
+    margin-top: 26px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.serviceCard {
+    border: 1px solid #e9e9e9;
+    border-radius: 16px;
+    background: #fff;
+    padding: 20px;
+}
+
+.serviceCard img {
+    width: 44px;
+    height: 44px;
+}
+
+.serviceCard h3 {
+    margin: 14px 0 0;
+    font-size: 21px;
+}
+
+.serviceCard p {
+    margin: 8px 0 0;
+    font-size: 14px;
+    color: #484848;
+    line-height: 1.45;
+}
+
+/* ===== DETAIL BUTTON ===== */
+.detailBtn {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 14px;
+    padding: 9px 18px;
+    border: 1.5px solid rgba(252, 139, 6, 0.55);
+    border-radius: 8px;
+    background: transparent;
+    color: #fc8b06;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: inherit;
+    cursor: pointer;
+    transition: color 0.28s ease, border-color 0.28s ease, transform 0.18s ease;
+}
+
+.detailBtn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #fc8b06;
+    transform: translateX(-101%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.detailBtn > span {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.detailBtn:hover {
+    color: #111;
+    border-color: #fc8b06;
+}
+
+.detailBtn:hover::before {
+    transform: translateX(0);
+}
+
+.detailBtn:active {
+    transform: scale(0.94);
+}
+
+.detailBtnArrow {
+    display: inline-block;
+    transition: transform 0.25s ease;
+}
+
+.detailBtn:hover .detailBtnArrow {
+    transform: translateX(4px);
+}
+
+.advantagesGrid {
+    margin-top: 26px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.advantageCard {
+    border: 1px solid rgba(252, 139, 6, 0.26);
+    background: linear-gradient(180deg, #141414 0%, #0e0e0e 100%);
+    border-radius: 14px;
+    padding: 20px;
+    color: #fff;
+}
+
+.advantageCard h3 {
+    margin: 0;
+    font-size: 19px;
+}
+
+.advantageCard p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #d8d8d8;
+    line-height: 1.45;
+}
+
+.processGrid {
+    margin-top: 26px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.processCard {
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    background: #fff;
+    padding: 20px;
+}
+
+.processCard span {
+    font-size: 34px;
+    color: #d3d3d3;
+    font-weight: 700;
+}
+
+.processCard h3 {
+    margin: 10px 0 0;
+    font-size: 19px;
+}
+
+.processCard p {
+    margin: 8px 0 0;
+    font-size: 14px;
+    color: #4a4a4a;
+    line-height: 1.45;
+}
+
+.reviewsGrid {
+    margin-top: 26px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+@keyframes reviewEnter {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes reviewExit {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-14px);
+    }
+}
+
+.reviewCard {
+    border: 1px solid rgba(252, 139, 6, 0.24);
+    border-radius: 14px;
+    background: #121212;
+    padding: 20px;
+    color: #fff;
+}
+
+.reviewCardEnter {
+    animation: reviewEnter 0.38s ease-out both;
+}
+
+.reviewCardExit {
+    animation: reviewExit 0.3s ease-in both;
+}
+
+.reviewStars {
+    display: block;
+    margin-bottom: 10px;
+    color: #fc8b06;
+    letter-spacing: 0.08em;
+    font-size: 13px;
+    line-height: 1;
+}
+
+.reviewCard p {
+    margin: 0;
+    line-height: 1.45;
+    color: #dfdfdf;
+}
+
+.reviewCard h3 {
+    margin: 14px 0 0;
+    color: #fc8b06;
+}
+
+.contactGrid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 0.9fr;
+    gap: 14px;
+    align-items: start;
+}
+
+.contactInfo,
+.contactForm,
+.contactDetails {
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    background: #fff;
+    padding: 20px;
+}
+
+.contactInfo p {
+    margin: 12px 0 0;
+    color: #4a4a4a;
+    line-height: 1.45;
+}
+
+.contactForm {
+    display: grid;
+    gap: 10px;
+}
+
+.contactForm input,
+.contactForm textarea {
+    border: 1px solid #d6d6d6;
+    border-radius: 10px;
+    padding: 11px 12px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.contactForm button {
+    height: 44px;
+    border: none;
+    border-radius: 999px;
+    background: #fc8b06;
+    color: #111;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.contactDetails h3 {
+    margin: 0;
+}
+
+.contactDetails a {
+    margin-top: 12px;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contactDetails a img {
+    width: 18px;
+    height: 18px;
+}
+
+.contactDetails p {
+    margin: 10px 0 0;
+    color: #4d4d4d;
+}
+
+@media screen and (max-width: 1024px) {
+    .heroInner {
+        min-height: 100vh;
+        min-height: 100svh;
+    }
+
+    .heroStats,
+    .advantagesGrid,
+    .processGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .servicesGrid,
+    .contactGrid,
+    .reviewsGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contactInfo {
+        grid-column: span 2;
+    }
+}
+
+/* Extra-narrow safety net (Z Fold cover, tiny phones) */
+@media screen and (max-width: 380px) {
+    .heroInlineCards,
+    .heroStats,
+    .servicesGrid,
+    .advantagesGrid,
+    .processGrid,
+    .reviewsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .heroButtons {
+        flex-direction: column;
+    }
+
+    .primaryBtn,
+    .secondaryBtn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .heroInfo h1 {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        width: min(1200px, 100% - 20px);
+    }
+
+    .heroInner {
+        min-height: 100vh;
+        min-height: 100svh;
+        padding: 38px 0 24px;
+    }
+
+    .heroLogoWrap {
+        padding: 8px 12px;
+        margin-bottom: 14px;
+    }
+
+    .heroLogo {
+        width: 112px;
+    }
+
+    .heroInlineCards,
+    .heroStats,
+    .servicesGrid,
+    .advantagesGrid,
+    .processGrid,
+    .reviewsGrid,
+    .contactGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .heroButtons {
+        flex-direction: column;
+    }
+
+    .primaryBtn,
+    .secondaryBtn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .heroInfo h1 {
+        font-size: 32px;
+    }
+
+    .sectionLight,
+    .sectionDark {
+        padding: 44px 0;
+    }
+}
+
+/* ================================================================
+   MODAL
+   ================================================================ */
+
+@keyframes backdropIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes backdropOut {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+@keyframes panelIn {
+    from { opacity: 0; transform: translateY(44px) scale(0.96); }
+    to   { opacity: 1; transform: translateY(0)    scale(1);    }
+}
+
+@keyframes panelOut {
+    from { opacity: 1; transform: translateY(0)    scale(1);    }
+    to   { opacity: 0; transform: translateY(24px) scale(0.97); }
+}
+
+@keyframes sliderEnterRight {
+    from { opacity: 0; transform: translateX(32px); }
+    to   { opacity: 1; transform: translateX(0);    }
+}
+
+@keyframes sliderEnterLeft {
+    from { opacity: 0; transform: translateX(-32px); }
+    to   { opacity: 1; transform: translateX(0);     }
+}
+
+/* Backdrop */
+.modalBackdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: backdropIn 0.3s ease-out both;
+}
+
+.modalBackdropExit {
+    animation: backdropOut 0.3s ease-in both;
+}
+
+/* Panel */
+.modalPanel {
+    position: relative;
+    width: 100%;
+    max-width: 940px;
+    max-height: calc(100svh - 40px);
+    background: #111;
+    border: 1px solid rgba(252, 139, 6, 0.22);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    animation: panelIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.04),
+        0 40px 80px rgba(0, 0, 0, 0.7),
+        0 0 60px rgba(252, 139, 6, 0.06);
+}
+
+.modalPanelExit {
+    animation: panelOut 0.3s ease-in both;
+}
+
+.modalPanelNarrow {
+    max-width: 640px;
+}
+
+/* Close button */
+.modalClose {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 20;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(252, 139, 6, 0.35);
+    background: rgba(17, 17, 17, 0.95);
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+    transition:
+        border-color 0.25s ease,
+        background   0.25s ease,
+        transform    0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.modalClose::before,
+.modalClose::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 15px;
+    height: 1.5px;
+    background: rgba(252, 139, 6, 0.8);
+    border-radius: 2px;
+    transition: background 0.25s ease;
+}
+
+.modalClose::before { transform: translate(-50%, -50%) rotate(45deg); }
+.modalClose::after  { transform: translate(-50%, -50%) rotate(-45deg); }
+
+.modalClose:hover {
+    border-color: #fc8b06;
+    background: #fc8b06;
+    transform: rotate(90deg) scale(1.08);
+}
+
+.modalClose:hover::before,
+.modalClose:hover::after {
+    background: #111;
+}
+
+.modalClose:focus-visible {
+    outline: 2px solid #fc8b06;
+    outline-offset: 3px;
+}
+
+/* Inner layout */
+.modalInner {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.modalInnerWithGallery {
+    flex-direction: row;
+}
+
+/* ---- Slider ---- */
+.modalSlider {
+    position: relative;
+    flex: 0 0 400px;
+    min-height: 420px;
+    background: #0a0a0a;
+    overflow: hidden;
+}
+
+.sliderImgWrap {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.sliderImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.sliderFromRight { animation: sliderEnterRight 0.32s ease-out both; }
+.sliderFromLeft  { animation: sliderEnterLeft  0.32s ease-out both; }
+
+.sliderArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(252, 139, 6, 0.5);
+    background: rgba(0, 0, 0, 0.65);
+    color: #fc8b06;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    z-index: 5;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.sliderArrow:hover {
+    background: #fc8b06;
+    border-color: #fc8b06;
+    color: #111;
+}
+
+.sliderArrowPrev { left: 12px; }
+.sliderArrowNext { right: 12px; }
+
+.sliderDots {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    z-index: 5;
+}
+
+.sliderDot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.35);
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.sliderDotActive {
+    background: #fc8b06;
+    transform: scale(1.4);
+}
+
+/* ---- Content ---- */
+.modalContent {
+    flex: 1;
+    padding: 40px 36px;
+    overflow-y: auto;
+    min-height: 0;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(252, 139, 6, 0.2) transparent;
+}
+
+.modalContent::-webkit-scrollbar         { width: 4px; }
+.modalContent::-webkit-scrollbar-thumb   { background: rgba(252, 139, 6, 0.25); border-radius: 4px; }
+.modalContent::-webkit-scrollbar-track   { background: transparent; }
+
+.modalContentIcon {
+    width: 52px;
+    height: 52px;
+    filter: invert(58%) sepia(85%) saturate(1100%) hue-rotate(2deg) brightness(1.05);
+    margin-bottom: 18px;
+    opacity: 0.85;
+}
+
+.modalKicker {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #fc8b06;
+    margin-bottom: 10px;
+}
+
+.modalTitle {
+    margin: 0 0 22px;
+    font-size: clamp(22px, 2.8vw, 34px);
+    line-height: 1.1;
+    color: #fff;
+    padding-right: 52px;
+}
+
+.modalIntro {
+    margin: 0 0 16px;
+    font-size: 15px;
+    color: #e0e0e0;
+    line-height: 1.62;
+}
+
+.modalBody {
+    margin: 0 0 16px;
+    font-size: 14px;
+    color: #c0c0c0;
+    line-height: 1.72;
+}
+
+.modalList {
+    margin: 0 0 20px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.modalList li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 14px;
+    color: #d4d4d4;
+    line-height: 1.5;
+}
+
+.modalList li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #fc8b06;
+    flex-shrink: 0;
+}
+
+.modalPrices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.modalPriceTag {
+    background: rgba(252, 139, 6, 0.1);
+    border: 1px solid rgba(252, 139, 6, 0.35);
+    color: #fc8b06;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 8px;
+}
+
+.modalNote {
+    margin: 0 0 28px;
+    font-size: 13px;
+    color: #656565;
+    line-height: 1.55;
+    font-style: italic;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    padding-top: 14px;
+}
+
+.modalCallBtn {
+    display: inline-flex;
+    align-items: center;
+    height: 48px;
+    padding: 0 32px;
+    background: #fc8b06;
+    color: #111;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 999px;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    box-shadow: 0 4px 18px rgba(252, 139, 6, 0.32);
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.modalCallBtn:hover {
+    background: #ff9a27;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(252, 139, 6, 0.44);
+}
+
+.modalCallBtn:active {
+    transform: translateY(0);
+}
+
+/* ---- Modal responsive ---- */
+@media screen and (max-width: 768px) {
+    .modalBackdrop {
+        padding: 12px;
+        align-items: center;
+    }
+
+    .modalPanel,
+    .modalPanelNarrow {
+        max-width: 100%;
+        border-radius: 16px;
+        max-height: 92svh;
+    }
+
+    .modalInnerWithGallery {
+        flex-direction: column;
+    }
+
+    .modalSlider {
+        flex: 0 0 240px;
+        height: 240px;
+        min-height: unset;
+        width: 100%;
+    }
+
+    .modalContent {
+        padding: 24px 20px 36px;
+    }
+
+    .modalTitle {
+        font-size: 22px;
+        padding-right: 50px;
+    }
+}

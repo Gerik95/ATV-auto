@@ -23,7 +23,7 @@ const Footer = () => {
                                 <br /><a href="tel:+78123307115">+7 (812) 330-71-15</a>
                                 <br /><a href="tel:+79119247115">+7 (911) 924-71-15</a>
                                 <br /><a href="tel:+78129007115">+7 (812) 900-71-15</a>
-                                <br />10:00-21:00
+                                <br />10:00-20:00
                             </p>
                         </div>
                         <div className="contacts_item tires">
@@ -31,7 +31,7 @@ const Footer = () => {
                             <p className='contacts_item_text'>
                                 Санкт-Петербург, <br />ул. Пилотов, д.31
                                 <br /><a href="tel:+79219003178">+7 (921) 900-31-78</a>
-                                <br /> 09:00-22:00
+                                <br /> 09:00-21:00
                             </p>
                         </div>
                         <div className="contacts_item carwash">
@@ -39,25 +39,49 @@ const Footer = () => {
                             <p className='contacts_item_text'>
                                 Санкт-Петербург, <br />ул. Пилотов, д.31
                                 <br /><a href="tel:+79219003178">+7 (921) 900-31-78</a>
-                                <br /> Круглосуточно
+                                <br /> 09:00-21:00
                             </p>
-                        </div>
-                        <div className="prices">
-                            Все цены, указанные на сайте, приведены как справочная информация, требуют уточнения и не являются публичной офертой, определяемой положениями
-                            ст. 437 Гражданского кодекса Российской Федерации, и могут быть изменены в любое время без предупреждения. <br />
-                            2016—2022 © ООО «Лидер»
                         </div>
                     </div>
 
-
                     <div className="payment">
-                        У нас возможна оплата по картам:
-                        <div className="payment_images">
-                            <img className='payment_image' src={mastercard} alt="mastercard" />
-                            <img className='payment_image' src={visa} alt="visa" />
-                            <img className='payment_image' src={mir} alt="mir" />
-                            <img className='payment_image' src={halva} alt="halva" />
+                        <div className="partners">
+                            <h3 className="partners_title">Наши партнёры</h3>
+                            <div className="partners_buttons">
+                                <a
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="partner_btn prolamp_btn"
+                                    href="https://www.sankt-peterburg.pro-lamp.ru/"
+                                    aria-label="Открыть сайт партнёра PRO-LAMP"
+                                >
+                                    PRO-LAMP
+                                </a>
+                                <a
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="partner_btn rusam_btn"
+                                    href="https://www.rusam.ru/"
+                                    aria-label="Открыть сайт партнёра RUSAM"
+                                >
+                                    RUSAM
+                                </a>
+                            </div>
                         </div>
+
+                        <div className="payment_title">У нас возможна оплата по картам:</div>
+                        <div className="payment_images">
+                            <img className='payment_image' src={mastercard} alt="mastercard" loading="lazy" />
+                            <img className='payment_image' src={visa} alt="visa" loading="lazy" />
+                            <img className='payment_image' src={mir} alt="mir" loading="lazy" />
+                            <img className='payment_image' src={halva} alt="halva" loading="lazy" />
+                        </div>
+                    </div>
+
+                    <div className="prices">
+                        Все цены, указанные на сайте, приведены как справочная информация, требуют уточнения и не являются публичной офертой, определяемой положениями
+                        ст. 437 Гражданского кодекса Российской Федерации, и могут быть изменены в любое время без предупреждения. <br />
+                        2016—{new Date().getFullYear()} © ООО «Лидер»
                     </div>
                 </div>
             </div>

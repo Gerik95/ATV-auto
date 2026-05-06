@@ -17,7 +17,7 @@ const ItemScroll = ({ text, img, index, componentRef }) => {
             <div className="item-scroll-text">
                 {text}
             </div>
-            <img className="item-scroll-image" src={img} alt={text} />
+            <img className="item-scroll-image" src={img} alt={text}  loading="lazy" />
         </div>
     );
 };

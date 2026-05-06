@@ -1,17 +1,78 @@
-.euiFieldText:focus, .euiTextArea:focus, .euiFieldNumber:focus {
-    background-image: linear-gradient(to top, #fc8b06, #fc8b06 2px, transparent 2px, transparent 100%)!important;
+.vin-form {
+    margin-top: 18px;
+}
+
+.vin-form-row {
+    margin-bottom: 14px;
+}
+
+.vin-form .euiFieldText,
+.vin-form .euiFieldNumber,
+.vin-form .euiTextArea {
+    border-radius: 16px !important;
+    border: 1px solid rgba(252, 139, 6, 0.22) !important;
+    background: #fff !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+    color: #161616 !important;
+    min-height: 54px;
+    padding: 12px 16px !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease !important;
+}
+
+.vin-form .euiTextArea {
+    min-height: 132px;
+    resize: vertical;
+}
+
+.vin-form .euiFieldText::placeholder,
+.vin-form .euiFieldNumber::placeholder,
+.vin-form .euiTextArea::placeholder {
+    color: #7a7a7a;
+}
+
+.vin-form .euiFieldText:focus,
+.vin-form .euiTextArea:focus,
+.vin-form .euiFieldNumber:focus {
+    border-color: rgba(252, 139, 6, 0.85) !important;
+    background: #fffaf4 !important;
+    box-shadow: 0 0 0 3px rgba(252, 139, 6, 0.14) !important;
+    background-image: none !important;
+}
+
+.vin-form-submit {
+    width: 100%;
+    min-height: 52px;
+    border: none !important;
+    border-radius: 999px !important;
+    background: #fc8b06 !important;
+    color: #111 !important;
+    box-shadow: 0 14px 24px rgba(252, 139, 6, 0.24) !important;
+    font-weight: 700 !important;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.vin-form-submit:hover,
+.vin-form-submit:focus {
+    background: #ff9a27 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 18px 28px rgba(252, 139, 6, 0.28) !important;
+}
+
+.vin-form-submit:focus-visible {
+    outline: 2px solid #fc8b06;
+    outline-offset: 3px;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    margin: 0;
 }
 
 .message-error {
-    color: red;
+    color: #d64d24;
     font-size: 12px;
-    margin-left: 5px;
-    margin-top: 3px;
+    line-height: 1.4;
+    margin-left: 6px;
+    margin-top: 6px;
 }

@@ -1,5 +1,5 @@
 .footer {
-    background-color: #000;
+    background-color: #0b0b0b;
     color: #fff;
     padding: 50px 0;
 }
@@ -7,14 +7,86 @@
 .footer_grid {
     display: grid;
     grid-template-columns: 1fr 200px;
-    align-items: center;
+    grid-template-areas:
+        "contacts payment"
+        "prices   payment";
+    align-items: start;
     grid-column-gap: 50px;
 }
 
+.contacts_wrap {
+    grid-area: contacts;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "contacts tires carwash";
+    grid-row-gap: 20px;
+}
+
 .payment {
+    grid-area: payment;
     font-size: 16px;
     line-height: 20px;
     color: #fff;
+}
+
+.prices {
+    grid-area: prices;
+    color: gray;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+.payment_title {
+    margin-top: 18px;
+}
+
+.partners {
+    padding: 14px;
+    border: 1px solid rgba(252, 139, 6, 0.25);
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+}
+
+.partners_title {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.2;
+}
+
+.partners_buttons {
+    margin-top: 14px;
+    display: grid;
+    gap: 10px;
+}
+
+.partner_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-radius: 999px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    transition: transform 220ms ease, box-shadow 220ms ease, filter 220ms ease;
+}
+
+.partner_btn:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.04);
+}
+
+.prolamp_btn {
+    background: #b61a18;
+    box-shadow: 0 10px 24px rgba(182, 26, 24, 0.3);
+}
+
+.rusam_btn {
+    background: rgb(5, 127, 199);
+    box-shadow: 0 10px 24px rgba(5, 127, 199, 0.3);
 }
 
 .payment_images {
@@ -27,30 +99,20 @@
 
 .payment_image {
     width: 100%;
+    max-width: 124px;
+    height: 40px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
 }
 
 .contacts_item {
     margin-bottom: 10px;
-
 }
 
 .contacts_item_text {
     margin-top: 5px;
     line-height: 22px;
-}
-
-.prices {
-    padding-right: 20px;
-}
-
-.contacts_wrap {
-    display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-        "contacts tires carwash"
-        "prices prices prices";
-    grid-row-gap: 20px;
 }
 
 .contacts_item.contacts {
@@ -65,11 +127,6 @@
     grid-area: carwash;
 }
 
-.prices {
-    grid-area: prices;
-    color: gray;
-}
-
 .contacts_item_text a {
     color: #fff;
     transition: color 350ms;
@@ -79,18 +136,22 @@
     color: #fc8b06;
 }
 
+/* ── mobile (react-device-detect) ── */
+
 .mobile .footer_grid {
     grid-template-columns: 1fr;
-
+    grid-template-areas:
+        "contacts"
+        "payment"
+        "prices";
 }
 
 .mobile .contacts_wrap {
     grid-template-columns: 1fr;
     grid-template-areas:
-        "contacts contacts contacts"
-        "tires tires tires"
-        "carwash carwash carwash"
-        "prices prices prices";
+        "contacts"
+        "tires"
+        "carwash";
 }
 
 .mobile .contacts_item {
@@ -102,6 +163,97 @@
     text-align: center;
 }
 
+.mobile .partners {
+    text-align: left;
+}
+
+.mobile .payment_images {
+    grid-template-columns: repeat(4, minmax(54px, 72px));
+    justify-content: center;
+    gap: 8px;
+}
+
 .mobile .prices {
     text-align: center;
+    padding-right: 0;
+    padding-top: 0;
+    margin-top: 40px;
+}
+
+/* ── 1024px and below ── */
+
+@media screen and (max-width: 1024px) {
+    .payment_image {
+        max-width: 96px;
+        height: 30px;
+    }
+
+    .footer_grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "contacts"
+            "payment"
+            "prices";
+    }
+
+    .contacts_wrap {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "contacts tires"
+            "carwash carwash";
+    }
+
+    .payment {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .prices {
+        padding-right: 0;
+        padding-top: 0;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .partners {
+        max-width: 340px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .payment_images {
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) and (orientation: landscape) {
+    .partners {
+        max-width: 340px;
+        margin: 0 auto;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .payment_image {
+        max-width: 78px;
+        height: 24px;
+    }
+
+    .contacts_wrap {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "contacts"
+            "tires"
+            "carwash";
+    }
+
+    .contacts_item {
+        text-align: center;
+    }
+
+    .payment_images {
+        grid-template-columns: repeat(4, minmax(54px, 72px));
+        gap: 8px;
+    }
 }
